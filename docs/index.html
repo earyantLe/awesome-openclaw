@@ -1,18 +1,24 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Awesome OpenClaw 🦞 - Curated Resources & Learning Paths</title>
-    <meta name="description" content="A curated list of awesome OpenClaw resources, skills, extensions, and community projects with complete learning paths">
+    <title>Awesome OpenClaw 🦞 - OpenClaw 资源与学习路径</title>
+    <meta name="description" content="OpenClaw 资源、技能、扩展和社区项目的精选列表，包含完整学习路径">
     <link rel="stylesheet" href="styles.css">
     <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🦞</text></svg>">
 </head>
 <body>
+    <!-- Language Switcher -->
+    <div class="lang-switcher">
+        <button class="lang-btn active" data-lang="zh">🇨🇳 中文</button>
+        <button class="lang-btn" data-lang="en">🇺🇸 English</button>
+    </div>
+
     <header class="hero">
         <div class="container">
             <h1>🦞 Awesome OpenClaw</h1>
-            <p class="subtitle">A curated list of awesome OpenClaw resources, skills, extensions, and community projects</p>
+            <p class="subtitle" data-zh="OpenClaw 资源、技能、扩展和社区项目的精选列表" data-en="A curated list of awesome OpenClaw resources, skills, extensions, and community projects">OpenClaw 资源、技能、扩展和社区项目的精选列表</p>
             
             <div class="badges">
                 <img src="https://img.shields.io/badge/License-MIT-yellow.svg" alt="License">
@@ -23,274 +29,139 @@
             </div>
 
             <div class="cta-buttons">
-                <a href="https://github.com/earyantLe/awesome-openclaw" class="btn btn-primary">View on GitHub</a>
-                <a href="#learning-paths" class="btn btn-secondary">Start Learning</a>
+                <a href="https://github.com/earyantLe/awesome-openclaw" class="btn btn-primary" data-zh="在 GitHub 上查看" data-en="View on GitHub">在 GitHub 上查看</a>
+                <a href="#learning-paths" class="btn btn-secondary" data-zh="开始学习" data-en="Start Learning">开始学习</a>
             </div>
         </div>
     </header>
 
     <nav class="toc">
         <div class="container">
-            <h2>📑 Quick Navigation</h2>
+            <h2 data-zh="📑 快速导航" data-en="📑 Quick Navigation">📑 快速导航</h2>
             <ul>
-                <li><a href="#what-is-openclaw">What is OpenClaw?</a></li>
-                <li><a href="#learning-paths">Learning Paths</a></li>
-                <li><a href="#skills">Skills (47+)</a></li>
-                <li><a href="#integrations">Integrations (28+)</a></li>
-                <li><a href="#tutorials">Tutorials (40+)</a></li>
+                <li><a href="#what-is-openclaw" data-zh="什么是 OpenClaw" data-en="What is OpenClaw?">什么是 OpenClaw</a></li>
+                <li><a href="#learning-paths" data-zh="学习路径" data-en="Learning Paths">学习路径</a></li>
+                <li><a href="#skills" data-zh="技能 (47+)" data-en="Skills (47+)">技能 (47+)</a></li>
+                <li><a href="#integrations" data-zh="集成 (28+)" data-en="Integrations (28+)">集成 (28+)</a></li>
+                <li><a href="#tutorials" data-zh="教程 (40+)" data-en="Tutorials (40+)">教程 (40+)</a></li>
                 <li><a href="https://discord.gg/openclaw">Discord</a></li>
             </ul>
         </div>
     </nav>
 
     <main class="container">
+        <!-- What is OpenClaw -->
         <section id="what-is-openclaw" class="section">
-            <h2>🦞 What is OpenClaw?</h2>
-            <p><strong>OpenClaw</strong> is an open-source AI agent runtime that transforms your LLM into a <strong>proactive, tool-using assistant</strong> with memory, scheduling, and real-world integrations.</p>
+            <h2 data-zh="🦞 什么是 OpenClaw？" data-en="🦞 What is OpenClaw?">🦞 什么是 OpenClaw？</h2>
+            <p data-zh="<strong>OpenClaw</strong> 是一个开源 AI 助手运行时，可将你的 LLM 转变为具有记忆、调度和真实世界集成的<strong>主动、使用工具的助手</strong>。" data-en="<strong>OpenClaw</strong> is an open-source AI agent runtime that transforms your LLM into a <strong>proactive, tool-using assistant</strong> with memory, scheduling, and real-world integrations."><strong>OpenClaw</strong> 是一个开源 AI 助手运行时，可将你的 LLM 转变为具有记忆、调度和真实世界集成的<strong>主动、使用工具的助手</strong>。</p>
             
             <div class="features-grid">
                 <div class="feature-card">
                     <span class="icon">🧠</span>
-                    <h3>Memory-Equipped</h3>
-                    <p>Persistent memory files for long-term context</p>
+                    <h3 data-zh="记忆系统" data-en="Memory-Equipped">记忆系统</h3>
+                    <p data-zh="持久化记忆文件，支持长期上下文" data-en="Persistent memory files for long-term context">持久化记忆文件，支持长期上下文</p>
                 </div>
                 <div class="feature-card">
                     <span class="icon">⏰</span>
-                    <h3>Cron & Scheduling</h3>
-                    <p>Built-in task scheduler for proactive work</p>
+                    <h3 data-zh="定时调度" data-en="Cron & Scheduling">定时调度</h3>
+                    <p data-zh="内置任务调度器，支持主动工作" data-en="Built-in task scheduler for proactive work">内置任务调度器，支持主动工作</p>
                 </div>
                 <div class="feature-card">
                     <span class="icon">🛠️</span>
-                    <h3>Tool Ecosystem</h3>
-                    <p>Extensible skill system with 50+ integrations</p>
+                    <h3 data-zh="工具生态" data-en="Tool Ecosystem">工具生态</h3>
+                    <p data-zh="可扩展技能系统，50+ 集成" data-en="Extensible skill system with 50+ integrations">可扩展技能系统，50+ 集成</p>
                 </div>
                 <div class="feature-card">
                     <span class="icon">💬</span>
-                    <h3>Multi-Channel</h3>
-                    <p>Discord, Telegram, WhatsApp, Feishu, Slack, Signal</p>
+                    <h3 data-zh="多通道支持" data-en="Multi-Channel">多通道支持</h3>
+                    <p data-zh="Discord、Telegram、WhatsApp、飞书、Slack、Signal" data-en="Discord, Telegram, WhatsApp, Feishu, Slack, Signal">Discord、Telegram、WhatsApp、飞书、Slack、Signal</p>
                 </div>
                 <div class="feature-card">
                     <span class="icon">🔌</span>
-                    <h3>Plugin Architecture</h3>
-                    <p>Easy to extend with custom integrations</p>
+                    <h3 data-zh="插件架构" data-en="Plugin Architecture">插件架构</h3>
+                    <p data-zh="轻松扩展自定义集成" data-en="Easy to extend with custom integrations">轻松扩展自定义集成</p>
                 </div>
             </div>
         </section>
 
+        <!-- Learning Paths -->
         <section id="learning-paths" class="section">
-            <h2>🎯 Learning Paths</h2>
-            <p>Choose your path from beginner to expert:</p>
+            <h2 data-zh="🎯 学习路径" data-en="🎯 Learning Paths">🎯 学习路径</h2>
+            <p data-zh="选择适合你的学习路径，从入门到专家：" data-en="Choose your path from beginner to expert:">选择适合你的学习路径，从入门到专家：</p>
             
             <div class="paths-grid">
                 <div class="path-card">
                     <div class="path-header">
                         <span class="path-icon">⚡</span>
-                        <h3>Quick Start</h3>
+                        <h3 data-zh="快速入门" data-en="Quick Start">快速入门</h3>
                     </div>
-                    <div class="path-time">5 minutes</div>
+                    <div class="path-time">5 分钟</div>
                     <ul class="path-content">
-                        <li>Install OpenClaw</li>
-                        <li>Run your first commands</li>
-                        <li>Understand the basics</li>
+                        <li data-zh="安装 OpenClaw" data-en="Install OpenClaw">安装 OpenClaw</li>
+                        <li data-zh="运行第一个命令" data-en="Run your first commands">运行第一个命令</li>
+                        <li data-zh="理解基础知识" data-en="Understand the basics">理解基础知识</li>
                     </ul>
-                    <a href="tutorials/quickstart/01-5min-quickstart.html" class="btn btn-small">Start Now</a>
+                    <a href="tutorials/quickstart/01-5min-quickstart.html" class="btn btn-small" data-zh="立即开始" data-en="Start Now">立即开始</a>
                 </div>
 
                 <div class="path-card">
                     <div class="path-header">
                         <span class="path-icon">🎓</span>
-                        <h3>Beginner</h3>
+                        <h3 data-zh="初学者" data-en="Beginner">初学者</h3>
                     </div>
-                    <div class="path-time">4-6 hours</div>
+                    <div class="path-time">4-6 小时</div>
                     <ul class="path-content">
-                        <li>Create your first skill</li>
-                        <li>Build your first bot</li>
-                        <li>Basic deployment</li>
+                        <li data-zh="创建第一个技能" data-en="Create your first skill">创建第一个技能</li>
+                        <li data-zh="构建第一个机器人" data-en="Build your first bot">构建第一个机器人</li>
+                        <li data-zh="基础部署" data-en="Basic deployment">基础部署</li>
                     </ul>
-                    <a href="tutorials/README.html" class="btn btn-small">Start Path</a>
+                    <a href="tutorials/README.html" class="btn btn-small" data-zh="开始路径" data-en="Start Path">开始路径</a>
                 </div>
 
                 <div class="path-card">
                     <div class="path-header">
                         <span class="path-icon">💼</span>
-                        <h3>Advanced</h3>
+                        <h3 data-zh="进阶" data-en="Advanced">进阶</h3>
                     </div>
-                    <div class="path-time">15-20 hours</div>
+                    <div class="path-time">15-20 小时</div>
                     <ul class="path-content">
-                        <li>Production projects</li>
-                        <li>Complex integrations</li>
-                        <li>Best practices</li>
+                        <li data-zh="生产级项目" data-en="Production projects">生产级项目</li>
+                        <li data-zh="复杂集成" data-en="Complex integrations">复杂集成</li>
+                        <li data-zh="最佳实践" data-en="Best practices">最佳实践</li>
                     </ul>
-                    <a href="tutorials/projects/" class="btn btn-small">View Projects</a>
+                    <a href="tutorials/projects/" class="btn btn-small" data-zh="查看项目" data-en="View Projects">查看项目</a>
                 </div>
 
                 <div class="path-card">
                     <div class="path-header">
                         <span class="path-icon">🏆</span>
-                        <h3>Expert</h3>
+                        <h3 data-zh="专家" data-en="Expert">专家</h3>
                     </div>
-                    <div class="path-time">30+ hours</div>
+                    <div class="path-time">30+ 小时</div>
                     <ul class="path-content">
-                        <li>Master complex workflows</li>
-                        <li>Multi-step automation</li>
-                        <li>Contribute to community</li>
+                        <li data-zh="掌握复杂工作流" data-en="Master complex workflows">掌握复杂工作流</li>
+                        <li data-zh="多步骤自动化" data-en="Multi-step automation">多步骤自动化</li>
+                        <li data-zh="贡献社区" data-en="Contribute to community">贡献社区</li>
                     </ul>
-                    <a href="skills/examples/advanced/" class="btn btn-small">Advanced Examples</a>
+                    <a href="skills/examples/advanced/" class="btn btn-small" data-zh="高级示例" data-en="Advanced Examples">高级示例</a>
                 </div>
             </div>
         </section>
 
-        <section id="skills" class="section">
-            <h2>🎯 Skills (47+)</h2>
-            <p>Comprehensive skill library with examples from beginner to expert.</p>
-            
-            <div class="stats-grid">
-                <div class="stat-card">
-                    <div class="stat-number">21</div>
-                    <div class="stat-label">Built-in Skills</div>
+        <!-- Footer -->
+        <footer class="footer" style="margin-top: 60px;">
+            <div class="container">
+                <p data-zh="<strong>由 OpenClaw 社区用 🦞 制作</strong>" data-en="<strong>Made with 🦞 by the OpenClaw Community</strong>"><strong>由 OpenClaw 社区用 🦞 制作</strong></p>
+                <div class="footer-links">
+                    <a href="https://github.com/openclaw/openclaw">OpenClaw Core</a>
+                    <a href="https://docs.openclaw.ai" data-zh="文档" data-en="Documentation">文档</a>
+                    <a href="https://discord.gg/openclaw">Discord</a>
+                    <a href="https://github.com/earyantLe/awesome-openclaw">GitHub</a>
                 </div>
-                <div class="stat-card">
-                    <div class="stat-number">15</div>
-                    <div class="stat-label">Feishu Skills</div>
-                </div>
-                <div class="stat-card">
-                    <div class="stat-number">6</div>
-                    <div class="stat-label">Miaoda AI Skills</div>
-                </div>
-                <div class="stat-card">
-                    <div class="stat-number">5</div>
-                    <div class="stat-label">Community Skills</div>
-                </div>
+                <p class="footer-note" data-zh="最后更新：2026-03-18 | 所有链接已验证 ✅" data-en="Last Updated: 2026-03-18 | All links verified ✅">最后更新：2026-03-18 | 所有链接已验证 ✅</p>
             </div>
-
-            <div class="resource-links">
-                <a href="skills/COMPLETE_SKILLS_LIST.html" class="resource-link">📖 Complete Skills List</a>
-                <a href="skills/SKILL_DEVELOPMENT_GUIDE.html" class="resource-link">🔧 Skill Development Guide</a>
-                <a href="skills/examples/" class="resource-link">💡 Examples Library (6 examples)</a>
-            </div>
-        </section>
-
-        <section id="integrations" class="section">
-            <h2>🔌 Integrations (28+)</h2>
-            <p>Connect OpenClaw to your favorite tools and platforms.</p>
-            
-            <div class="categories-grid">
-                <div class="category-card">
-                    <h3>💬 Messaging</h3>
-                    <p>Discord, Telegram, WhatsApp, Feishu, Slack, Signal</p>
-                </div>
-                <div class="category-card">
-                    <h3>☁️ Cloud Storage</h3>
-                    <p>AWS S3, Google Cloud, Azure Blob</p>
-                </div>
-                <div class="category-card">
-                    <h3>🗄️ Databases</h3>
-                    <p>PostgreSQL, MySQL, MongoDB, Redis</p>
-                </div>
-                <div class="category-card">
-                    <h3>🤖 APIs</h3>
-                    <p>OpenAI, Anthropic, Google, Microsoft</p>
-                </div>
-                <div class="category-card">
-                    <h3>⚙️ DevOps</h3>
-                    <p>GitHub, GitLab, Jenkins, Docker</p>
-                </div>
-            </div>
-
-            <div class="resource-links">
-                <a href="integrations/COMPLETE_INTEGRATIONS_LIST.html" class="resource-link">📖 Complete Integrations List</a>
-                <a href="integrations/INTEGRATION_GUIDE.html" class="resource-link">🔧 Integration Guide</a>
-                <a href="integrations/config-templates/" class="resource-link">📋 12+ Config Templates</a>
-            </div>
-        </section>
-
-        <section id="tutorials" class="section">
-            <h2>📚 Tutorials (40+)</h2>
-            <p>Step-by-step tutorials from quick start to expert projects.</p>
-            
-            <div class="tutorial-list">
-                <div class="tutorial-item">
-                    <span class="tutorial-badge">Quick Start</span>
-                    <h3>5-Minute Quick Start</h3>
-                    <p>Get started with OpenClaw in just 5 minutes</p>
-                    <a href="tutorials/quickstart/01-5min-quickstart.html">Read Tutorial →</a>
-                </div>
-                <div class="tutorial-item">
-                    <span class="tutorial-badge">Project</span>
-                    <h3>Customer Support Bot</h3>
-                    <p>Build a complete FAQ bot with ticket system</p>
-                    <a href="tutorials/projects/customer-support-bot.html">Read Tutorial →</a>
-                </div>
-                <div class="tutorial-item">
-                    <span class="tutorial-badge">Project</span>
-                    <h3>Personal Assistant</h3>
-                    <p>Create your personal productivity assistant</p>
-                    <a href="tutorials/projects/personal-assistant.html">Read Tutorial →</a>
-                </div>
-            </div>
-
-            <div class="resource-links">
-                <a href="tutorials/COMPLETE_TUTORIALS_LIST.html" class="resource-link">📖 All 40+ Tutorials</a>
-                <a href="tutorials/quickstart/" class="resource-link">⚡ Quick Start Series</a>
-                <a href="tutorials/projects/" class="resource-link">💼 Project Tutorials</a>
-            </div>
-        </section>
-
-        <section id="statistics" class="section">
-            <h2>📊 Repository Statistics</h2>
-            
-            <div class="stats-highlight">
-                <div class="stat-highlight-item">
-                    <div class="stat-highlight-number">145+</div>
-                    <div class="stat-highlight-label">Total Resources</div>
-                </div>
-                <div class="stat-highlight-item">
-                    <div class="stat-highlight-number">300KB+</div>
-                    <div class="stat-highlight-label">Documentation</div>
-                </div>
-                <div class="stat-highlight-item">
-                    <div class="stat-highlight-number">60+</div>
-                    <div class="stat-highlight-label">Files</div>
-                </div>
-                <div class="stat-highlight-item">
-                    <div class="stat-highlight-number">100%</div>
-                    <div class="stat-highlight-label">Link Health</div>
-                </div>
-            </div>
-        </section>
-
-        <section id="contributing" class="section">
-            <h2>🤝 Contributing</h2>
-            <p>Contributions are welcome! Here's how to contribute:</p>
-            
-            <ol class="contributing-steps">
-                <li><strong>Fork</strong> the repository</li>
-                <li><strong>Create</strong> a branch (<code>git checkout -b feature/add-my-skill</code>)</li>
-                <li><strong>Add</strong> your resource with a clear description</li>
-                <li><strong>Commit</strong> your changes (<code>git commit -m 'Add: My awesome skill'</code>)</li>
-                <li><strong>Push</strong> to the branch (<code>git push origin feature/add-my-skill</code>)</li>
-                <li><strong>Open</strong> a Pull Request</li>
-            </ol>
-
-            <div class="cta-buttons">
-                <a href="https://github.com/earyantLe/awesome-openclaw" class="btn btn-primary">Fork on GitHub</a>
-                <a href="CONTRIBUTING.html" class="btn btn-secondary">Read Guide</a>
-            </div>
-        </section>
+        </footer>
     </main>
-
-    <footer class="footer">
-        <div class="container">
-            <p><strong>Made with 🦞 by the OpenClaw Community</strong></p>
-            <div class="footer-links">
-                <a href="https://github.com/openclaw/openclaw">OpenClaw Core</a>
-                <a href="https://docs.openclaw.ai">Documentation</a>
-                <a href="https://discord.gg/openclaw">Discord</a>
-                <a href="https://github.com/earyantLe/awesome-openclaw">GitHub</a>
-            </div>
-            <p class="footer-note">Last Updated: 2026-03-18 | All links verified ✅</p>
-        </div>
-    </footer>
 
     <script src="script.js"></script>
 </body>

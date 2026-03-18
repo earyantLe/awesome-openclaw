@@ -1,66 +1,35 @@
-// Awesome OpenClaw - Interactive Features
+// Awesome OpenClaw - Language Switcher
 
-// Smooth scroll for navigation
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-        const target = document.querySelector(this.getAttribute('href'));
-        if (target) {
-            target.scrollIntoView({
-                behavior: 'smooth',
-                block: 'start'
+const langSwitcher = {
+    currentLang: 'zh',
+    
+    init() {
+        const savedLang = localStorage.getItem('awesome-openclaw-lang') || 'zh';
+        this.setLanguage(savedLang);
+        
+        document.querySelectorAll('.lang-btn').forEach(btn => {
+            btn.addEventListener('click', (e) => {
+                const lang = e.target.dataset.lang;
+                this.setLanguage(lang);
             });
-        }
-    });
-});
-
-// Add animation on scroll
-const observerOptions = {
-    threshold: 0.1,
-    rootMargin: '0px 0px -50px 0px'
+        });
+    },
+    
+    setLanguage(lang) {
+        this.currentLang = lang;
+        localStorage.setItem('awesome-openclaw-lang', lang);
+        
+        document.querySelectorAll('.lang-btn').forEach(btn => {
+            btn.classList.toggle('active', btn.dataset.lang === lang);
+        });
+        
+        document.querySelectorAll('[data-zh][data-en]').forEach(el => {
+            const text = el.dataset[lang];
+            if (text) el.innerHTML = text;
+        });
+        
+        document.documentElement.lang = lang === 'zh' ? 'zh-CN' : 'en';
+    }
 };
 
-const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            entry.target.style.opacity = '1';
-            entry.target.style.transform = 'translateY(0)';
-        }
-    });
-}, observerOptions);
-
-// Observe all cards
-document.querySelectorAll('.feature-card, .path-card, .stat-card, .category-card').forEach(card => {
-    card.style.opacity = '0';
-    card.style.transform = 'translateY(20px)';
-    card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-    observer.observe(card);
-});
-
-// Dynamic year in footer
-const footerNote = document.querySelector('.footer-note');
-if (footerNote) {
-    const currentYear = new Date().getFullYear();
-    footerNote.innerHTML = footerNote.innerHTML.replace('2026', currentYear);
-}
-
-// Badge click tracking (optional analytics)
-document.querySelectorAll('.badges img').forEach(badge => {
-    badge.addEventListener('click', function() {
-        console.log('Badge clicked:', this.alt);
-    });
-});
-
-// Add loading state to buttons
-document.querySelectorAll('.btn').forEach(btn => {
-    btn.addEventListener('click', function() {
-        this.style.opacity = '0.7';
-        setTimeout(() => {
-            this.style.opacity = '1';
-        }, 300);
-    });
-});
-
-// Console welcome message
-console.log('%c🦞 Welcome to Awesome OpenClaw!', 'font-size: 20px; color: #ff6b35; font-weight: bold;');
-console.log('%cExplore our resources: https://github.com/earyantLe/awesome-openclaw', 'font-size: 14px; color: #004e89;');
+document.addEventListener('DOMContentLoaded', () => langSwitcher.init());
