@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>5-Minute Quick Start - Awesome OpenClaw 🦞</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="lang-switcher">
+        <button class="lang-btn active" data-lang="zh">🇨🇳 中文</button>
+        <button class="lang-btn" data-lang="en">🇺🇸 English</button>
+    </div>
+
+    <header class="hero" style="padding: 40px 0;">
+        <div class="container">
+            <h1>⚡ 5-Minute Quick Start</h1>
+            <p>Get started with OpenClaw in just 5 minutes</p>
+            <a href="tutorials.html" class="btn btn-secondary">← Back to Tutorials</a>
+        </div>
+    </header>
+
+    <main class="container" style="padding: 60px 20px; max-width: 800px;">
+        <article class="tutorial-content">
+            <div class="tutorial-meta">
+                <span class="tutorial-badge">Quick Start</span>
+                <span>⏱️ 5 minutes</span>
+                <span>📊 Beginner</span>
+            </div>
+
+            <h2>What You'll Learn</h2>
+            <ul>
+                <li>Install OpenClaw</li>
+                <li>Initialize your workspace</li>
+                <li>Start the gateway</li>
+                <li>Verify installation</li>
+            </ul>
+
+            <h2>Step 1: Install OpenClaw</h2>
+            <pre><code>npm install -g openclaw</code></pre>
+
+            <h2>Step 2: Initialize Workspace</h2>
+            <pre><code>openclaw init my-agent
+cd my-agent</code></pre>
+
+            <h2>Step 3: Start Gateway</h2>
+            <pre><code>openclaw gateway start</code></pre>
+
+            <h2>Step 4: Verify</h2>
+            <pre><code>openclaw status</code></pre>
+
+            <div class="tutorial-nav">
+                <a href="tutorials.html" class="btn btn-secondary">← All Tutorials</a>
+                <a href="https://github.com/earyantLe/awesome-openclaw/blob/main/tutorials/quickstart/01-5min-quickstart.md" class="btn btn-primary">View Full Tutorial on GitHub →</a>
+            </div>
+        </article>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p><strong>Made with 🦞 by the OpenClaw Community</strong></p>
+            <div class="footer-links">
+                <a href="index.html">Home</a>
+                <a href="tutorials.html">Tutorials</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
