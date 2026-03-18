@@ -2,6 +2,11 @@
 
 > **A curated list of awesome OpenClaw resources, skills, extensions, and community projects.**
 
+## 🌐 Language / 语言
+
+- 🇺🇸 **English** (You are here)
+- 🇨🇳 **[中文](README_CN.md)** - 中文版本
+
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 [![Stars](https://img.shields.io/github/stars/earyantLe/awesome-openclaw?style=flat)](https://github.com/earyantLe/awesome-openclaw)
 [![Last Updated](https://img.shields.io/github/last-commit/earyantLe/awesome-openclaw?label=updated)](https://github.com/earyantLe/awesome-openclaw/commits/main)
