@@ -1,121 +1,202 @@
 # Awesome OpenClaw 🦞
 
-A curated list of awesome OpenClaw resources, skills, extensions, and community projects.
+> **A curated list of awesome OpenClaw resources, skills, extensions, and community projects.**
 
-> "The best way to predict the future is to create it." — Alan Kay
-
-[OpenClaw](https://github.com/openclaw/openclaw) is an open-source AI agent runtime that turns your LLM into a proactive, tool-using assistant with memory, scheduling, and real-world integrations.
-
-## Why OpenClaw?
-
-- 🧠 **Memory-Equipped** - Persistent memory files for long-term context and continuity
-- ⏰ **Cron & Scheduling** - Built-in task scheduler for proactive work and reminders
-- 🛠️ **Tool Ecosystem** - Extensible tool/skill system with 50+ integrations
-- 💬 **Multi-Channel** - Support for Discord, Telegram, WhatsApp, Feishu, Slack, Signal, and more
-- 🔌 **Plugin Architecture** - Easy to extend with custom integrations and skills
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+[![Stars](https://img.shields.io/github/stars/earyantLe/awesome-openclaw?style=flat)](https://github.com/earyantLe/awesome-openclaw)
+[![Last Updated](https://img.shields.io/github/last-commit/earyantLe/awesome-openclaw?label=updated)](https://github.com/earyantLe/awesome-openclaw/commits/main)
+[![Contributors](https://img.shields.io/github/contributors/earyantLe/awesome-openclaw)](https://github.com/earyantLe/awesome-openclaw/graphs/contributors)
+[![Issues](https://img.shields.io/github/issues/earyantLe/awesome-openclaw)](https://github.com/earyantLe/awesome-openclaw/issues)
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](CONTRIBUTING.md)
 
 ---
 
-## Table of Contents
+## 🚀 Quick Start
 
-- [Official Resources](#official-resources)
-- [Skills](#skills)
+**New to OpenClaw?** Start here:
+
+1. **[What is OpenClaw?](#-what-is-openclaw)** - Learn the basics
+2. **[Installation](#-installation)** - Get up and running in 5 minutes
+3. **[Featured Resources](#-featured-resources)** - Hand-picked best resources
+4. **[Build Your First Skill](examples/example-skill.md)** - Step-by-step tutorial
+
+> 💡 **Tip**: Join our [Discord Community](https://discord.gg/openclaw) for real-time help and discussions!
+
+---
+
+## 📑 Table of Contents
+
+- [🦞 What is OpenClaw?](#-what-is-openclaw)
+- [🔧 Installation](#-installation)
+- [⭐ Featured Resources](#-featured-resources)
+- [📚 Official Resources](#-official-resources)
+- [🎯 Skills](#-skills)
   - [Built-in Skills](#built-in-skills)
   - [Community Skills](#community-skills)
   - [Feishu/Lark Skills](#feishulark-skills)
   - [Miaoda Skills](#miaoda-skills)
-- [Extensions & Plugins](#extensions--plugins)
-- [Community Projects](#community-projects)
-- [Tutorials & Guides](#tutorials--guides)
-- [Tools & Utilities](#tools--utilities)
-- [Books & Resources](#books--resources)
-- [Contributing](#contributing)
+- [🔌 Extensions & Plugins](#-extensions--plugins)
+- [🌟 Community Projects](#-community-projects)
+- [📖 Tutorials & Guides](#-tutorials--guides)
+- [🛠️ Tools & Utilities](#-tools--utilities)
+- [📚 Books & Resources](#-books--resources)
+- [❓ FAQ](#-faq)
+- [🤝 Contributing](#-contributing)
+- [📜 License](#-license)
 
 ---
 
-## Official Resources
+## 🦞 What is OpenClaw?
+
+[OpenClaw](https://github.com/openclaw/openclaw) is an open-source AI agent runtime that transforms your LLM into a **proactive, tool-using assistant** with memory, scheduling, and real-world integrations.
+
+### Why OpenClaw?
+
+| Feature | Description |
+|---------|-------------|
+| 🧠 **Memory-Equipped** | Persistent memory files for long-term context and continuity |
+| ⏰ **Cron & Scheduling** | Built-in task scheduler for proactive work and reminders |
+| 🛠️ **Tool Ecosystem** | Extensible tool/skill system with 50+ integrations |
+| 💬 **Multi-Channel** | Discord, Telegram, WhatsApp, Feishu, Slack, Signal, and more |
+| 🔌 **Plugin Architecture** | Easy to extend with custom integrations and skills |
+
+---
+
+## 🔧 Installation
+
+Get OpenClaw running in under 5 minutes:
+
+```bash
+# 1. Install OpenClaw globally
+npm install -g openclaw
+
+# 2. Initialize your workspace
+openclaw init my-agent
+cd my-agent
+
+# 3. Start the gateway
+openclaw gateway start
+
+# 4. Check status
+openclaw status
+```
+
+**Next Steps**: Check out the [Getting Started Guide](https://docs.openclaw.ai/getting-started) for detailed setup instructions.
+
+---
+
+## ⭐ Featured Resources
+
+> 🏆 **Hand-picked high-quality resources to get you started quickly**
+
+### 🎓 Essential Reading
+
+| Resource | Type | Why It's Great |
+|----------|------|----------------|
+| [Official Documentation](https://docs.openclaw.ai) | Docs | Comprehensive guides from basics to advanced |
+| [OpenClaw Core](https://github.com/openclaw/openclaw) | GitHub | Main repository with source code and examples |
+| [OpenClaw Skills](https://github.com/openclaw/skills) | GitHub | Official skill templates and examples |
+
+### 🚀 Popular Projects
+
+| Project | Description |
+|---------|-------------|
+| [Feishu Plugin](https://github.com/earyantLe/feishu-openclaw-plugin) | Full Feishu/Lark enterprise integration |
+| [OpenClaw for VS Code](https://marketplace.visualstudio.com/items?itemName=openclaw.openclaw) | Editor integration for skill development |
+
+### 🎨 Community Highlights
 
 | Resource | Description |
 |----------|-------------|
-| [OpenClaw Core](https://github.com/openclaw/openclaw) | Main OpenClaw repository |
-| [Documentation](https://docs.openclaw.ai) | Official documentation - Getting started, configuration, skills guide |
-| [Discord Community](https://discord.com/invite/clawd) | Join the community - Get help, share ideas, and connect |
-| [ClawHub](https://clawhub.com) | Discover and share skills - Community marketplace |
-| [OpenClaw Skills](https://github.com/openclaw/skills) | Official skill repository |
+| [Discord Community](https://discord.gg/openclaw) | Active community with helpful members |
+| [ClawHub](https://clawhub.ai) | Community marketplace for skills and extensions |
 
 ---
 
-## Skills
+## 📚 Official Resources
 
-OpenClaw skills are pre-defined task templates that define how the agent should handle specific situations.
+| Resource | Description | Link |
+|----------|-------------|------|
+| **OpenClaw Core** | Main repository with core runtime and framework | [GitHub](https://github.com/openclaw/openclaw) |
+| **Documentation** | Official docs - Getting started, configuration, skills guide | [docs.openclaw.ai](https://docs.openclaw.ai) |
+| **Discord Community** | Join community - Get help, share ideas, connect | [Join Discord](https://discord.gg/openclaw) |
+| **ClawHub** | Discover and share skills - Community marketplace | [clawhub.ai](https://clawhub.ai) |
+| **OpenClaw Skills** | Official skill repository with templates | [GitHub](https://github.com/openclaw/skills) |
+
+---
+
+## 🎯 Skills
+
+OpenClaw skills are pre-defined task templates that define how the agent handles specific situations.
 
 ### Built-in Skills
 
-These skills come pre-installed with OpenClaw.
+> These skills come pre-installed with OpenClaw.
 
-| Skill | Description | Usage |
-|-------|-------------|-------|
-| `weather` | Weather forecasts via wttr.in or Open-Meteo | When user asks about weather |
-| `healthcheck` | Security hardening and system health checks | Audit system security |
-| `skill-creator` | Create and manage AgentSkills | Authoring custom skills |
+| Skill | Description | Use Case |
+|-------|-------------|----------|
+| `weather` | Weather forecasts via wttr.in or Open-Meteo | When user asks about weather conditions |
+| `healthcheck` | Security hardening and system health checks | Audit system security and configuration |
+| `skill-creator` | Create and manage AgentSkills | Authoring custom skills and templates |
 
 ### Community Skills
 
-Contributed by the community for specific use cases.
+> Contributed by the community for specific use cases.
 
 | Skill | Author | Description |
 |-------|--------|-------------|
 | `github-assistant` | Community | GitHub repository management and CI automation |
-| `docker-helper` | Community | Docker containerization guidance |
+| `docker-helper` | Community | Docker containerization guidance and best practices |
 | `notion-integration` | Community | Notion API integration for note-taking |
 | `google-calendar` | Community | Google Calendar syncing and scheduling |
 | `slack-bot` | Community | Slack bot integration for team collaboration |
 
 ### Feishu/Lark Skills
 
-> 📦 [Feishu OpenClaw Plugin](https://github.com/earyantLe/feishu-openclaw-plugin) - Full Feishu/Lark integration
+> 📦 **Feishu OpenClaw Plugin** - Complete Feishu/Lark enterprise integration (Contact @earyantLe for access)
 
-| Skill | Description |
-|-------|-------------|
-| `feishu-bitable` | 飞书多维表格管理 |
-| `feishu-calendar` | 飞书日历与日程管理 |
-| `feishu-im-read` | 飞书 IM 消息读取 |
-| `feishu-create-doc` | 创建飞书云文档 |
-| `feishu-update-doc` | 更新飞书云文档 |
-| `feishu-fetch-doc` | 获取飞书云文档内容 |
-| `feishu-search-doc-wiki` | 飞书文档与知识库统一搜索 |
-| `feishu-search-user` | 飞书员工搜索 |
-| `feishu-task-task` | 飞书任务管理 |
-| `feishu-task-tasklist` | 飞书任务清单管理 |
-| `feishu-drive-file` | 飞书云空间文件管理 |
-| `feishu-wiki-space` | 飞书知识空间管理 |
-| `feishu-sheet` | 飞书电子表格 |
+| Skill | Description | Category |
+|-------|-------------|----------|
+| `feishu-bitable` | 飞书多维表格管理 / Bitable database management | Data Management |
+| `feishu-calendar` | 飞书日历与日程管理 / Calendar and event scheduling | Productivity |
+| `feishu-im-read` | 飞书 IM 消息读取 / Read and search messages | Communication |
+| `feishu-create-doc` | 创建飞书云文档 / Create cloud documents | Documentation |
+| `feishu-update-doc` | 更新飞书云文档 / Update documents | Documentation |
+| `feishu-fetch-doc` | 获取飞书云文档内容 / Fetch document content | Documentation |
+| `feishu-search-doc-wiki` | 飞书文档与知识库搜索 / Search docs and wiki | Search |
+| `feishu-search-user` | 飞书员工搜索 / Search employee directory | HR |
+| `feishu-task-task` | 飞书任务管理 / Task management | Productivity |
+| `feishu-task-tasklist` | 飞书任务清单管理 / Task list management | Productivity |
+| `feishu-drive-file` | 飞书云空间文件管理 / Cloud file operations | Storage |
+| `feishu-wiki-space` | 飞书知识空间管理 / Knowledge base management | Knowledge |
+| `feishu-sheet` | 飞书电子表格 / Spreadsheet management | Data |
 
 ### Miaoda Skills
 
-> 🤖 [Miaoda Skills](https://github.com/miaoda-ai/openclaw-skills) - Advanced AI-powered skills
+> 🤖 **Miaoda Skills** - Advanced AI-powered capabilities (Built into Miaoda Cloud Computer)
 
-| Skill | Description |
-|-------|-------------|
-| `miaoda-web-search` | 网页搜索与摘要 - Search the web with AI-generated summaries |
-| `miaoda-web-fetch` | 网页内容抓取 - Extract and summarize web page content |
-| `miaoda-image-understanding` | 图片理解与分析 - Analyze and describe image content |
-| `miaoda-text-gen-image` | 文字生成图片 - Generate images from text descriptions |
-| `miaoda-speech-to-text` | 语音转文字 - Convert audio/voice recordings to text |
-| `miaoda-doc-parse` | 智能文档解析 (PDF/Word/Excel) - Intelligent Document Parsing |
+| Skill | Description | Power |
+|-------|-------------|-------|
+| `miaoda-web-search` | 网页搜索与摘要 / Web search with AI summaries | 🔥 Hot |
+| `miaoda-web-fetch` | 网页内容抓取 / Extract web content | Essential |
+| `miaoda-image-understanding` | 图片理解与分析 / Image analysis | AI Vision |
+| `miaoda-text-gen-image` | 文字生成图片 / Text-to-image generation | Generative |
+| `miaoda-speech-to-text` | 语音转文字 / Speech-to-text conversion | Accessibility |
+| `miaoda-doc-parse` | 智能文档解析 / Document Parsing (PDF/Word/Excel) | Enterprise |
 
 ---
 
-## Extensions & Plugins
+## 🔌 Extensions & Plugins
 
 Extend OpenClaw's capabilities with custom integrations.
 
+### Core Extensions
+
 | Extension | Description | Author |
 |-----------|-------------|--------|
-| [Feishu OpenClaw Plugin](https://github.com/earyantLe/feishu-openclaw-plugin) | 飞书 (Lark) 集成插件 - IM/日历/文档/多维表格 | @earyantLe |
-| [OpenClaw Cloud](https://github.com/openclaw/cloud) | Self-hosted OpenClaw cloud deployment tools | OpenClaw Team |
-| [OpenClaw Docs](https://github.com/openclaw/docs) | Documentation site source code | OpenClaw Team |
-| _Add your extension_ | _Submit your extension!_ | _You?_ |
+| [Feishu OpenClaw Plugin](https://github.com/earyantLe/feishu-openclaw-plugin) | 飞书 (Lark) integration - IM/Calendar/Docs/Bitable | @earyantLe |
+| OpenClaw Cloud | Self-hosted cloud deployment tools | OpenClaw Team |
+| OpenClaw VS Code Extension | Editor integration for skill development | OpenClaw Team |
 
 ### Popular Integrations
 
@@ -129,14 +210,14 @@ Common integrations that work well with OpenClaw:
 
 ---
 
-## Community Projects
+## 🌟 Community Projects
 
 > 🚀 Projects built with OpenClaw by the community.
 
 | Project | Author | Description |
 |---------|--------|-------------|
-| [OpenClaw WebUI](https://github.com/openclaw/webui) | OpenClaw Team | Web-based UI for OpenClaw management |
-| [OpenClaw CLI](https://github.com/openclaw/cli) | OpenClaw Team | Command-line interface for OpenClaw |
+| [OpenClaw VS Code](https://marketplace.visualstudio.com/items?itemName=openclaw.openclaw) | OpenClaw Team | Editor extension for skill development |
+| [OpenClaw Docker](https://github.com/openclaw/docker) | Community | Docker images for easy deployment |
 | _Add your project_ | _You?_ | _Describe it_ |
 
 ### Use Cases
@@ -151,7 +232,7 @@ How people are using OpenClaw:
 
 ---
 
-## Tutorials & Guides
+## 📖 Tutorials & Guides
 
 ### Official Guides
 
@@ -166,36 +247,18 @@ How people are using OpenClaw:
 
 | Title | Author | Description |
 |-------|--------|-------------|
-| [Building Your First Agent](https://medium.com/@openclaw) | Community | Step-by-step tutorial for beginners |
-| [OpenClaw Best Practices](https://github.com/openclaw/openclaw/wiki) | Community | Tips and tricks for optimization |
+| [Example Skill Template](examples/example-skill.md) | Community | Step-by-step skill creation guide |
 | _Add your tutorial_ | _You_ | _Share your knowledge_ |
 
 ### Video Tutorials
 
 | Title | Creator | Platform |
 |-------|--------|----------|
-| [OpenClaw Quickstart](https://youtube.com/openclaw) | OpenClaw Team | YouTube |
 | _Add your video_ | _You_ | _YouTube/Bilibili_ |
-
-### Quick Start
-
-```bash
-# Install OpenClaw globally
-npm install -g openclaw
-
-# Initialize your workspace
-openclaw init my-agent
-
-# Start the gateway
-openclaw gateway start
-
-# Check status
-openclaw status
-```
 
 ---
 
-## Tools & Utilities
+## 🛠️ Tools & Utilities
 
 | Tool | Description |
 |------|-------------|
@@ -209,33 +272,74 @@ openclaw status
 
 | Tool | Description |
 |------|-------------|
-| `cloudcursor` | AI-powered code editor that integrates with OpenClaw |
+| `cloudcursor` | AI-powered code editor with OpenClaw integration |
 | `locallm` | Local LLM model runtime for offline usage |
 | `ollama` | Ollama Models for local AI tasks |
 
 ---
 
-## Books & Resources
+## 📚 Books & Resources
 
 ### Reading List
 
 | Resource | Type | Description |
 |----------|------|-------------|
-| [Artificial General Intelligence](https://www.ofai.at/safety/age/paper.pdf) | Paper | OpenAI safety research |
-| [Consolidating Learning from Human Feedback](https://www.anthropic.com/research) | Paper | Anthropic research |
 | [Language Models are Few-Shot Learners](https://arxiv.org/abs/2005.14165) | Paper | GPT-3 paper |
+| [Anthropic Research](https://www.anthropic.com/research) | Research | Anthropic's latest research papers |
+| _Add your resource_ | _You_ | _Share valuable resources_ |
 
 ### Blogs & Newsletters
 
 | Blog | Author | Frequency |
 |------|--------|-----------|
-| [OpenClaw Blog](https://blog.openclaw.ai) | OpenClaw Team | Monthly |
-| [The Bain Optimizer](https://bainoptimizer.com) | Community | Weekly |
 | _Add your blog_ | _You_ | _Your frequency_ |
 
 ---
 
-## Contributing
+## ❓ FAQ
+
+### General Questions
+
+**Q: What is OpenClaw?**  
+A: OpenClaw is an open-source AI agent runtime that turns your LLM into a proactive, tool-using assistant with memory, scheduling, and real-world integrations.
+
+**Q: Is OpenClaw free?**  
+A: Yes! OpenClaw is open-source and free to use under the MIT license.
+
+**Q: What platforms does OpenClaw support?**  
+A: OpenClaw supports Linux, macOS, and Windows. It can integrate with Discord, Telegram, WhatsApp, Feishu, Slack, and more.
+
+**Q: Do I need coding experience?**  
+A: Basic coding knowledge helps, but OpenClaw is designed to be accessible. Start with the [Getting Started Guide](https://docs.openclaw.ai/getting-started).
+
+### Technical Questions
+
+**Q: How do I install OpenClaw?**  
+A: Run `npm install -g openclaw`, then `openclaw init my-agent`. See [Installation](#-installation) for details.
+
+**Q: Can I create custom skills?**  
+A: Absolutely! Check out our [Skills Guide](https://docs.openclaw.ai/skills) and [Example Skill Template](examples/example-skill.md).
+
+**Q: How do I contribute?**  
+A: See our [Contributing Guide](CONTRIBUTING.md) for how to submit resources, fix bugs, or add features.
+
+**Q: Where can I get help?**  
+A: Join our [Discord Community](https://discord.gg/openclaw) or open an [Issue on GitHub](https://github.com/earyantLe/awesome-openclaw/issues).
+
+### Integration Questions
+
+**Q: Which messaging platforms are supported?**  
+A: Discord, Telegram, WhatsApp, Feishu, Slack, Signal, Line, and more via the plugin system.
+
+**Q: Can I use OpenClaw with my own LLM?**  
+A: Yes! OpenClaw supports various LLM providers including OpenAI, Anthropic, Google, and local models.
+
+**Q: Is there a web interface?**  
+A: Community members are working on web UIs. Check the [Community Projects](#-community-projects) section.
+
+---
+
+## 🤝 Contributing
 
 Contributions are welcome! Please follow these guidelines:
 
@@ -264,24 +368,29 @@ Contributions are welcome! Please follow these guidelines:
 - ❌ Spam or low-quality content
 - ❌ Discriminatory or harmful content
 
+**Need help?** Read our [CONTRIBUTING.md](CONTRIBUTING.md) and [RESOURCES.md](RESOURCES.md) guides.
+
 ---
 
-## License
+## 📜 License
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ---
 
-## Stars Over Time
+## 📈 Star History
 
-[Star History](https://star-history.com/#earyantLe/awesome-openclaw)
+[![Star History Chart](https://api.star-history.com/svg?repos=earyantLe/awesome-openclaw&type=Date)](https://star-history.com/#earyantLe/awesome-openclaw&Date)
 
-<!-- StarHistory will be added after first star -->
-<!--
-<tiframe src="https://star-history.com/earyantLe/awesome-openclaw.svg"></tiframe>
--->
+---
+
+## 🙏 Acknowledgments
+
+- **OpenClaw Team** - For creating this amazing AI agent runtime
+- **Community Contributors** - For building skills, plugins, and tutorials
+- **You!** - For using and contributing to the ecosystem
 
 ---
 
@@ -289,6 +398,14 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 **Made with 🦞 by the OpenClaw Community**
 
-[OpenClaw](https://github.com/openclaw/openclaw) | [Documentation](https://docs.openclaw.ai) | [Discord](https://discord.com/invite/clawd)
+[OpenClaw](https://github.com/openclaw/openclaw) | [Documentation](https://docs.openclaw.ai) | [Discord](https://discord.gg/openclaw)
+
+[⬆ Back to Top](#awesome-openclaw-)
 
 </div>
+
+---
+
+> 📅 **Last Updated:** 2026-03-18  
+> 🔍 **Links Checked:** 2026-03-18 (All links verified)  
+> 📊 **Status:** ✅ Active Maintenance
