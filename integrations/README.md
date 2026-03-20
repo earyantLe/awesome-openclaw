@@ -292,6 +292,13 @@ See [CONTRIBUTING.md](../CONTRIBUTING.md) for details.
 
 ## 📅 Changelog
 
+### 2026-03-20
+
+- ✅ Added new trending integrations (Notion AI, Linear, Stripe, Zoom AI)
+- ✅ Added MCP (Model Context Protocol) integration reference
+- ✅ Added new AI code editors (Cursor, Windsurf)
+- ✅ Updated version to 1.1.0
+
 ### 2026-03-18
 
 - ✅ Created complete integrations list (30+ integrations)
@@ -314,6 +321,6 @@ See [CONTRIBUTING.md](../CONTRIBUTING.md) for details.
 
 ---
 
-> 📅 **Last Updated:** 2026-03-18  
-> 📊 **Status:** ✅ Complete  
-> 🎯 **Version:** 1.0.0
+> 📅 **Last Updated:** 2026-03-20
+> 📊 **Status:** ✅ Complete
+> 🎯 **Version:** 1.1.0

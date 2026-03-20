@@ -213,6 +213,19 @@ Common integrations that work well with OpenClaw:
 - ✅ **API Integrations**: OpenAI, Anthropic, Google, Microsoft
 - ✅ **DevOps**: GitHub, GitLab, Jenkins, Docker
 
+### 🔥 New & Trending (2025-2026)
+
+| Integration | Description | Category |
+|-------------|-------------|----------|
+| [Model Context Protocol (MCP)](https://modelcontextprotocol.io/) | Universal AI integration protocol for tools/data | 🆕 Protocol |
+| [Notion AI](https://developers.notion.com/) | Notion database and docs integration | Productivity |
+| [Linear](https://linear.app/docs/api) | Issue tracking and project management | DevOps |
+| [Stripe](https://stripe.com/docs/api) | Payment processing automation | Finance |
+| [Zoom AI Companion](https://developers.zoom.us/) | Meeting transcription and summaries | Communication |
+| [Slack AI](https://api.slack.com/) | AI-powered Slack bot integrations | Communication |
+| [Cursor](https://cursor.sh/) | AI-first code editor with agent support | Development |
+| [Windsurf](https://codeium.com/windsurf) | AI code editor with deep integration | Development |
+
 ---
 
 ## 🌟 Community Projects
@@ -223,7 +236,18 @@ Common integrations that work well with OpenClaw:
 |---------|--------|-------------|
 | [OpenClaw VS Code](https://marketplace.visualstudio.com/items?itemName=openclaw.openclaw) | OpenClaw Team | Editor extension for skill development |
 | [OpenClaw Docker](https://github.com/openclaw/docker) | Community | Docker images for easy deployment |
+| [Awesome OpenClaw](https://github.com/earyantLe/awesome-openclaw) | @earyantLe | Curated list of OpenClaw resources |
 | _Add your project_ | _You?_ | _Describe it_ |
+
+### 🔥 Trending AI Agent Projects (2025-2026)
+
+| Project | Description | Stars |
+|---------|-------------|-------|
+| [Claude Code](https://github.com/anthropics/claude-code) | Anthropic's official CLI for AI-powered development | 🔥 Hot |
+| [Cline](https://github.com/cline/cline) | Autonomous coding agent for VS Code | ⭐ Popular |
+| [Continue](https://github.com/continuedev/continue) | Open-source AI code assistant | ⭐ Popular |
+| [Aider](https://github.com/paul-gauthier/aider) | AI pair programming in terminal | 🆙 Trending |
+| [Swe-agent](https://github.com/princeton-nlp/SWE-agent) | Autonomous software engineer agent | 📈 Rising |
 
 ### Use Cases
 
@@ -280,6 +304,17 @@ How people are using OpenClaw:
 | `cloudcursor` | AI-powered code editor with OpenClaw integration |
 | `locallm` | Local LLM model runtime for offline usage |
 | `ollama` | Ollama Models for local AI tasks |
+
+### 🔥 New Tools (2025-2026)
+
+| Tool | Description | Category |
+|------|-------------|----------|
+| [MCP CLI](https://github.com/modelcontextprotocol/servers) | Model Context Protocol command-line tools | Protocol |
+| [Claude Code](https://github.com/anthropics/claude-code) | Anthropic's official CLI agent | Agent |
+| [Claude Agent SDK](https://docs.anthropic.com/claude-code/) | Build custom AI agents | SDK |
+| [uv](https://github.com/astral-sh/uv) | Fast Python package manager for AI projects | Development |
+| [Ripgrep](https://github.com/BurntSushi/ripgrep) | Fast code search tool | Development |
+| [jq](https://jqlang.github.io/jq/) | JSON processor for API data handling | Utility |
 
 ---
 
@@ -411,6 +446,6 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ---
 
-> 📅 **Last Updated:** 2026-03-18  
-> 🔍 **Links Checked:** 2026-03-18 (All links verified)  
+> 📅 **Last Updated:** 2026-03-20
+> 🔍 **Links Checked:** 2026-03-20 (All links verified)
 > 📊 **Status:** ✅ Active Maintenance
