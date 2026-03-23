@@ -292,6 +292,13 @@ See [CONTRIBUTING.md](../CONTRIBUTING.md) for details.
 
 ## 📅 Changelog
 
+### 2026-03-23
+
+- ✅ Added "What's New (March 2026)" section with latest AI tools
+- ✅ Added GitHub Copilot Workspace, Cursor Composer, LangChain v0.3
+- ✅ Added AutoGen Studio and Continue Dev
+- ✅ Updated version to 1.2.0
+
 ### 2026-03-20
 
 - ✅ Added new trending integrations (Notion AI, Linear, Stripe, Zoom AI)
@@ -321,6 +328,6 @@ See [CONTRIBUTING.md](../CONTRIBUTING.md) for details.
 
 ---
 
-> 📅 **Last Updated:** 2026-03-20
+> 📅 **Last Updated:** 2026-03-23
 > 📊 **Status:** ✅ Complete
-> 🎯 **Version:** 1.1.0
+> 🎯 **Version:** 1.2.0

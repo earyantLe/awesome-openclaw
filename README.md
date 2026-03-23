@@ -316,6 +316,16 @@ How people are using OpenClaw:
 | [Ripgrep](https://github.com/BurntSushi/ripgrep) | Fast code search tool | Development |
 | [jq](https://jqlang.github.io/jq/) | JSON processor for API data handling | Utility |
 
+### 🆕 What's New (March 2026)
+
+| Tool/Resource | Description | Why It Matters |
+|---------------|-------------|----------------|
+| [GitHub Copilot Workspace](https://github.com/features/copilot) | AI-powered development environment | Native GitHub integration |
+| [Cursor Composer](https://cursor.sh/) | Multi-file AI code generation | Understands entire codebase |
+| [LangChain v0.3](https://python.langchain.com/) | Updated agent framework | Better LLM orchestration |
+| [AutoGen Studio](https://microsoft.github.io/autogen/) | Multi-agent workflow builder | Visual agent orchestration |
+| [Continue Dev](https://continue.dev/) | Open-source AI dev environment | Self-hostable alternative |
+
 ---
 
 ## 📚 Books & Resources
@@ -446,6 +456,6 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ---
 
-> 📅 **Last Updated:** 2026-03-20
-> 🔍 **Links Checked:** 2026-03-20 (All links verified)
+> 📅 **Last Updated:** 2026-03-23
+> 🔍 **Links Checked:** 2026-03-23 (All links verified)
 > 📊 **Status:** ✅ Active Maintenance

@@ -2,7 +2,7 @@
 
 > **Your comprehensive resource for OpenClaw skill development**
 >
-> **技能总数**: 47+ | **示例**: 5 complete examples | **最后更新**: 2026-03-20
+> **技能总数**: 47+ | **示例**: 5 complete examples | **最后更新**: 2026-03-23
 
 ---
 
@@ -342,7 +342,7 @@ We welcome contributions! Here's how you can help:
 
 ## 📊 Statistics
 
-**As of 2026-03-20**:
+**As of 2026-03-23**:
 
 - **Total Skills**: 47
 - **Code Examples**: 5 complete examples
