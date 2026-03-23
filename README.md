@@ -13,6 +13,7 @@
 [![Contributors](https://img.shields.io/github/contributors/earyantLe/awesome-openclaw)](https://github.com/earyantLe/awesome-openclaw/graphs/contributors)
 [![Issues](https://img.shields.io/github/issues/earyantLe/awesome-openclaw)](https://github.com/earyantLe/awesome-openclaw/issues)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](CONTRIBUTING.md)
+[![Link Check](https://github.com/earyantLe/awesome-openclaw/actions/workflows/link-checker.yml/badge.svg)](.github/workflows/link-checker.yml)
 
 ---
 
@@ -29,25 +30,34 @@
 
 ---
 
-## 📑 Table of Contents
+## 📑 Quick Navigation
 
-- [🦞 What is OpenClaw?](#-what-is-openclaw)
-- [🔧 Installation](#-installation)
-- [⭐ Featured Resources](#-featured-resources)
-- [📚 Official Resources](#-official-resources)
-- [🎯 Skills](#-skills)
-  - [Built-in Skills](#built-in-skills)
-  - [Community Skills](#community-skills)
-  - [Feishu/Lark Skills](#feishulark-skills)
-  - [Miaoda Skills](#miaoda-skills)
-- [🔌 Extensions & Plugins](#-extensions--plugins)
-- [🌟 Community Projects](#-community-projects)
-- [📖 Tutorials & Guides](#-tutorials--guides)
-- [🛠️ Tools & Utilities](#-tools--utilities)
-- [📚 Books & Resources](#-books--resources)
-- [❓ FAQ](#-faq)
-- [🤝 Contributing](#-contributing)
-- [📜 License](#-license)
+<details open>
+<summary><b>📖 目录导航 (点击展开/收起)</b></summary>
+
+### 🌟 Getting Started
+- [What is OpenClaw?](#-what-is-openclaw)
+- [Installation](#-installation)
+- [Quick Start](#-quick-start)
+
+### 📚 Resources
+- [Official Resources](#-official-resources)
+- [Featured Resources](#-featured-resources)
+- [Skills](#-skills) · [Built-in](#built-in-skills) · [Community](#community-skills) · [Feishu](#feishulark-skills) · [Miaoda](#miaoda-skills)
+- [Extensions & Plugins](#-extensions--plugins)
+- [Tools & Utilities](#-tools--utilities)
+
+### 🎓 Learning
+- [Tutorials & Guides](#-tutorials--guides)
+- [Community Projects](#-community-projects)
+- [Books & Resources](#-books--resources)
+
+### 🤝 Community
+- [Contributing](#-contributing)
+- [FAQ](#-faq)
+- [License](#-license)
+
+</details>
 
 ---
 
@@ -464,17 +474,33 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ---
 
+## 📊 Project Statistics
+
+| Metric | Value |
+|--------|-------|
+| 📦 Total Skills | 47+ |
+| 🔌 Integrations | 30+ |
+| 📚 Documentation Pages | 20+ |
+| ⭐ Contributors | Growing |
+| 📅 Last Update | 2026-03-23 |
+
+---
+
 <div align="center">
 
 **Made with 🦞 by the OpenClaw Community**
 
-[OpenClaw](https://github.com/openclaw/openclaw) | [Documentation](https://docs.openclaw.ai) | [Discord](https://discord.gg/openclaw)
+[⬆ Back to Top](#awesome-openclaw-) · [Report Issue](https://github.com/earyantLe/awesome-openclaw/issues/new/choose) · [Join Discord](https://discord.com/invite/openclaw)
 
-[⬆ Back to Top](#awesome-openclaw-)
+</div>
 
 </div>
 
 ---
+
+> 📅 **Last Updated:** 2026-03-23
+> 🔍 **Links Checked:** Weekly check enabled (Mondays 9AM UTC)
+> 📊 **Status:** ✅ Active Maintenance · [View Changelog](https://github.com/earyantLe/awesome-openclaw/commits/main)
 
 > 📅 **Last Updated:** 2026-03-23
 > 🔍 **Links Checked:** 2026-03-23 (All links verified)
