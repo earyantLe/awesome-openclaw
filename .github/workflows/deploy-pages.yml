@@ -5,10 +5,9 @@ on:
   push:
     branches:
       - main
-    paths:
-      - 'docs/**'
+    paths-ignore:
       - '.github/workflows/deploy-pages.yml'
-  
+
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
 
@@ -32,19 +31,29 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
       - name: Setup Pages
         uses: actions/configure-pages@v5
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Generate content
+        run: npm run generate
 
       - name: Build
         run: |
           echo "Building GitHub Pages..."
           echo "Build completed at $(date)"
-          ls -la docs/
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: './docs'
+          path: '.'
 
   # Deployment job
   deploy:
