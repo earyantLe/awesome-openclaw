@@ -14,6 +14,7 @@
 [![Issues](https://img.shields.io/github/issues/earyantLe/awesome-openclaw)](https://github.com/earyantLe/awesome-openclaw/issues)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](CONTRIBUTING.md)
 [![Link Check](https://github.com/earyantLe/awesome-openclaw/actions/workflows/link-checker.yml/badge.svg)](.github/workflows/link-checker.yml)
+[![Contributors](https://img.shields.io/badge/contributors-1-blue)](CONTRIBUTORS.md)
 
 ---
 
@@ -53,9 +54,10 @@
 - [Books & Resources](#-books--resources)
 
 ### 🤝 Community
-- [Contributing](#-contributing)
-- [FAQ](#-faq)
-- [License](#-license)
+- [Contributors](CONTRIBUTORS.md) - Hall of Fame
+- [Contributing](#-contributing) - How to help
+- [FAQ](#-faq) - Common questions
+- [License](#-license) - MIT License
 
 </details>
 

@@ -1,0 +1,316 @@
+{
+  "meta": {
+    "version": "1.0.0",
+    "lastUpdated": "2026-03-23",
+    "totalSkills": 47,
+    "totalIntegrations": 30,
+    "totalDocs": 20
+  },
+  "skills": {
+    "builtIn": [
+      {
+        "id": "weather",
+        "name": "Weather",
+        "emoji": "🌤️",
+        "description": "Weather forecasts via wttr.in or Open-Meteo",
+        "descriptionCN": "天气查询和预报",
+        "useCase": "When user asks about weather conditions",
+        "difficulty": 1,
+        "status": "active",
+        "triggers": ["天气", "weather", "会下雨吗", "temperature", "forecast"],
+        "link": "/usr/lib/node_modules/openclaw/skills/weather/SKILL.md"
+      },
+      {
+        "id": "healthcheck",
+        "name": "Healthcheck",
+        "emoji": "🛡️",
+        "description": "Security hardening and system health checks",
+        "descriptionCN": "安全加固和系统健康检查",
+        "useCase": "Audit system security and configuration",
+        "difficulty": 4,
+        "status": "active",
+        "triggers": ["安全审计", "security audit", "加固", "hardening"],
+        "link": "/usr/lib/node_modules/openclaw/skills/healthcheck/SKILL.md"
+      },
+      {
+        "id": "skill-creator",
+        "name": "Skill Creator",
+        "emoji": "✍️",
+        "description": "Create and manage AgentSkills",
+        "descriptionCN": "创建和管理技能",
+        "useCase": "Authoring custom skills and templates",
+        "difficulty": 3,
+        "status": "active",
+        "triggers": ["创建技能", "create a skill", "改进技能"],
+        "link": "/usr/lib/node_modules/openclaw/skills/skill-creator/SKILL.md"
+      },
+      {
+        "id": "summarize",
+        "name": "Summarize",
+        "emoji": "🧾",
+        "description": "Summarize or extract text from URLs, podcasts, and local files",
+        "descriptionCN": "总结 URL、播客和本地文件",
+        "useCase": "Article summarization, YouTube transcription",
+        "difficulty": 2,
+        "status": "active",
+        "triggers": ["总结", "summarize", "转录", "transcribe"],
+        "link": "/usr/lib/node_modules/openclaw/skills/summarize/SKILL.md"
+      },
+      {
+        "id": "voice-call",
+        "name": "Voice Call",
+        "emoji": "📞",
+        "description": "Start voice calls via the OpenClaw voice-call plugin",
+        "descriptionCN": "发起语音通话",
+        "useCase": "Automated phone calls, voice notifications",
+        "difficulty": 3,
+        "status": "active",
+        "triggers": ["打电话", "voice call", "电话通知"],
+        "link": "/usr/lib/node_modules/openclaw/skills/voice-call/SKILL.md"
+      }
+    ],
+    "community": [
+      {
+        "id": "github-assistant",
+        "name": "GitHub Assistant",
+        "author": "Community",
+        "description": "GitHub repository management and CI automation",
+        "status": "active",
+        "repo": "https://github.com/openclaw/skills/github-assistant"
+      },
+      {
+        "id": "docker-helper",
+        "name": "Docker Helper",
+        "author": "Community",
+        "description": "Docker containerization guidance and best practices",
+        "status": "active",
+        "repo": "https://github.com/openclaw/skills/docker-helper"
+      },
+      {
+        "id": "notion-integration",
+        "name": "Notion Integration",
+        "author": "Community",
+        "description": "Notion API integration for note-taking",
+        "status": "active",
+        "repo": "https://github.com/openclaw/skills/notion-integration"
+      },
+      {
+        "id": "google-calendar",
+        "name": "Google Calendar",
+        "author": "Community",
+        "description": "Google Calendar syncing and scheduling",
+        "status": "active",
+        "repo": "https://github.com/openclaw/skills/google-calendar"
+      },
+      {
+        "id": "slack-bot",
+        "name": "Slack Bot",
+        "author": "Community",
+        "description": "Slack bot integration for team collaboration",
+        "status": "active",
+        "repo": "https://github.com/openclaw/skills/slack-bot"
+      }
+    ],
+    "feishu": [
+      {
+        "id": "feishu-bitable",
+        "name": "Feishu Bitable",
+        "description": "飞书多维表格管理 / Bitable database management",
+        "category": "Data Management",
+        "status": "contact-author",
+        "author": "@earyantLe"
+      },
+      {
+        "id": "feishu-calendar",
+        "name": "Feishu Calendar",
+        "description": "飞书日历与日程管理 / Calendar and event scheduling",
+        "category": "Productivity",
+        "status": "contact-author",
+        "author": "@earyantLe"
+      },
+      {
+        "id": "feishu-im-read",
+        "name": "Feishu IM Read",
+        "description": "飞书 IM 消息读取 / Read and search messages",
+        "category": "Communication",
+        "status": "contact-author",
+        "author": "@earyantLe"
+      },
+      {
+        "id": "feishu-create-doc",
+        "name": "Feishu Create Doc",
+        "description": "创建飞书云文档 / Create cloud documents",
+        "category": "Documentation",
+        "status": "contact-author",
+        "author": "@earyantLe"
+      },
+      {
+        "id": "feishu-update-doc",
+        "name": "Feishu Update Doc",
+        "description": "更新飞书云文档 / Update documents",
+        "category": "Documentation",
+        "status": "contact-author",
+        "author": "@earyantLe"
+      },
+      {
+        "id": "feishu-fetch-doc",
+        "name": "Feishu Fetch Doc",
+        "description": "获取飞书云文档内容 / Fetch document content",
+        "category": "Documentation",
+        "status": "contact-author",
+        "author": "@earyantLe"
+      },
+      {
+        "id": "feishu-search-doc-wiki",
+        "name": "Feishu Search Doc Wiki",
+        "description": "飞书文档与知识库搜索 / Search docs and wiki",
+        "category": "Search",
+        "status": "contact-author",
+        "author": "@earyantLe"
+      },
+      {
+        "id": "feishu-search-user",
+        "name": "Feishu Search User",
+        "description": "飞书员工搜索 / Search employee directory",
+        "category": "HR",
+        "status": "contact-author",
+        "author": "@earyantLe"
+      },
+      {
+        "id": "feishu-task-task",
+        "name": "Feishu Task",
+        "description": "飞书任务管理 / Task management",
+        "category": "Productivity",
+        "status": "contact-author",
+        "author": "@earyantLe"
+      },
+      {
+        "id": "feishu-task-tasklist",
+        "name": "Feishu Tasklist",
+        "description": "飞书任务清单管理 / Task list management",
+        "category": "Productivity",
+        "status": "contact-author",
+        "author": "@earyantLe"
+      },
+      {
+        "id": "feishu-drive-file",
+        "name": "Feishu Drive File",
+        "description": "飞书云空间文件管理 / Cloud file operations",
+        "category": "Storage",
+        "status": "contact-author",
+        "author": "@earyantLe"
+      },
+      {
+        "id": "feishu-wiki-space",
+        "name": "Feishu Wiki Space",
+        "description": "飞书知识空间管理 / Knowledge base management",
+        "category": "Knowledge",
+        "status": "contact-author",
+        "author": "@earyantLe"
+      },
+      {
+        "id": "feishu-sheet",
+        "name": "Feishu Sheet",
+        "description": "飞书电子表格 / Spreadsheet management",
+        "category": "Data",
+        "status": "contact-author",
+        "author": "@earyantLe"
+      }
+    ],
+    "miaoda": [
+      {
+        "id": "miaoda-web-search",
+        "name": "Miaoda Web Search",
+        "description": "网页搜索与摘要 / Web search with AI summaries",
+        "power": "hot",
+        "status": "active"
+      },
+      {
+        "id": "miaoda-web-fetch",
+        "name": "Miaoda Web Fetch",
+        "description": "网页内容抓取 / Extract web content",
+        "power": "essential",
+        "status": "active"
+      },
+      {
+        "id": "miaoda-image-understanding",
+        "name": "Miaoda Image Understanding",
+        "description": "图片理解与分析 / Image analysis",
+        "power": "ai-vision",
+        "status": "active"
+      },
+      {
+        "id": "miaoda-text-gen-image",
+        "name": "Miaoda Text to Image",
+        "description": "文字生成图片 / Text-to-image generation",
+        "power": "generative",
+        "status": "active"
+      },
+      {
+        "id": "miaoda-speech-to-text",
+        "name": "Miaoda Speech to Text",
+        "description": "语音转文字 / Speech-to-text conversion",
+        "power": "accessibility",
+        "status": "active"
+      },
+      {
+        "id": "miaoda-doc-parse",
+        "name": "Miaoda Doc Parse",
+        "description": "智能文档解析 / Document Parsing (PDF/Word/Excel)",
+        "power": "enterprise",
+        "status": "active"
+      }
+    ]
+  },
+  "integrations": {
+    "messaging": [
+      { "name": "Discord", "status": "active", "difficulty": 3 },
+      { "name": "Telegram", "status": "active", "difficulty": 2 },
+      { "name": "WhatsApp", "status": "active", "difficulty": 4 },
+      { "name": "Feishu/Lark", "status": "active", "difficulty": 4 },
+      { "name": "Slack", "status": "active", "difficulty": 3 },
+      { "name": "Signal", "status": "experimental", "difficulty": 5 },
+      { "name": "Line", "status": "active", "difficulty": 3 }
+    ],
+    "storage": [
+      { "name": "AWS S3", "status": "active", "difficulty": 3 },
+      { "name": "Google Cloud Storage", "status": "active", "difficulty": 3 },
+      { "name": "Azure Blob", "status": "active", "difficulty": 3 }
+    ],
+    "databases": [
+      { "name": "PostgreSQL", "status": "active", "difficulty": 3 },
+      { "name": "MySQL", "status": "active", "difficulty": 2 },
+      { "name": "MongoDB", "status": "active", "difficulty": 3 },
+      { "name": "Redis", "status": "active", "difficulty": 2 }
+    ],
+    "apis": [
+      { "name": "OpenAI", "status": "active", "difficulty": 2 },
+      { "name": "Anthropic", "status": "active", "difficulty": 2 },
+      { "name": "Google AI", "status": "active", "difficulty": 2 },
+      { "name": "Microsoft Azure", "status": "active", "difficulty": 3 }
+    ],
+    "devops": [
+      { "name": "GitHub", "status": "active", "difficulty": 3 },
+      { "name": "GitLab", "status": "active", "difficulty": 3 },
+      { "name": "Jenkins", "status": "active", "difficulty": 4 },
+      { "name": "Docker", "status": "active", "difficulty": 4 }
+    ],
+    "trending": [
+      { "name": "Model Context Protocol (MCP)", "status": "new", "category": "Protocol" },
+      { "name": "Notion AI", "status": "active", "category": "Productivity" },
+      { "name": "Linear", "status": "active", "category": "DevOps" },
+      { "name": "Stripe", "status": "active", "category": "Finance" },
+      { "name": "Zoom AI Companion", "status": "active", "category": "Communication" },
+      { "name": "Slack AI", "status": "active", "category": "Communication" },
+      { "name": "Cursor", "status": "active", "category": "Development" },
+      { "name": "Windsurf", "status": "active", "category": "Development" }
+    ]
+  },
+  "status": {
+    "active": { "label": "Active", "badge": "✅", "description": "Actively maintained" },
+    "contact-author": { "label": "Contact Author", "badge": "⚠️", "description": "Access requires contacting author" },
+    "deprecated": { "label": "Deprecated", "badge": "❌", "description": "No longer maintained" },
+    "new": { "label": "New", "badge": "🆕", "description": "Recently added (< 30 days)" },
+    "experimental": { "label": "Experimental", "badge": "🧪", "description": "Experimental feature" }
+  }
+}

@@ -1,0 +1,65 @@
+{
+  "entries": [
+    {
+      "hash": "bab64de7c175e7f8f00b0f58bb1ad893",
+      "type": "commit",
+      "timestamp": 1773991557.469105,
+      "content": "feat: Add tutorial detail pages for GitHub Pages"
+    },
+    {
+      "hash": "7cbbcbdcf1b2901c10780ceeaaccd310",
+      "type": "commit",
+      "timestamp": 1773991557.469111,
+      "content": "fix: Fix ALL dead links in GitHub Pages (9 links fixed!)"
+    },
+    {
+      "hash": "8c00f3509c79b4656158942e22f18136",
+      "type": "commit",
+      "timestamp": 1773991557.469115,
+      "content": "feat: Add proper sub-pages for GitHub Pages"
+    },
+    {
+      "hash": "f35e923b0e3f1c501e0e7c1fbe5720ef",
+      "type": "commit",
+      "timestamp": 1773991557.469118,
+      "content": "feat: Add prominent Chinese README (README_CN.md)"
+    },
+    {
+      "hash": "54c1f1cb24ea2e42aa58720501a2dc07",
+      "type": "commit",
+      "timestamp": 1773991557.469121,
+      "content": "fix: Use internal anchor links for Pages navigation"
+    },
+    {
+      "hash": "126f9327bfd07cf6d6b69716bccfcdeb",
+      "type": "commit",
+      "timestamp": 1773991557.469124,
+      "content": "fix: Fix all dead links in GitHub Pages"
+    },
+    {
+      "hash": "7a364bd8a2bb1c08c20c89a8d14eea59",
+      "type": "commit",
+      "timestamp": 1773991557.469128,
+      "content": "feat: Add Chinese/English language switcher 🌐"
+    },
+    {
+      "hash": "3ed19e2be97f2756cb980904311b1784",
+      "type": "commit",
+      "timestamp": 1773991557.46913,
+      "content": "feat: Add auto-deployment workflow"
+    },
+    {
+      "hash": "9cf844a1bf80c5070bf5f665fc66d55c",
+      "type": "commit",
+      "timestamp": 1773991557.469133,
+      "content": "feat: Add website scripts"
+    },
+    {
+      "hash": "0d2f6f12b1d7822b6deb3bee4d1e7e6f",
+      "type": "commit",
+      "timestamp": 1773991557.469136,
+      "content": "feat: Add website styles"
+    }
+  ],
+  "last_updated": "2026-03-20T15:25:57.469139"
+}

@@ -1,0 +1,28 @@
+{
+  "name": "awesome-openclaw",
+  "version": "1.0.0",
+  "description": "A curated list of awesome OpenClaw resources, skills, extensions, and community projects",
+  "scripts": {
+    "generate": "node scripts/generate-readme.js",
+    "check-links": "lychee --verbose --no-progress --timeout 30 '**/*.md'",
+    "validate": "node scripts/validate-json.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/earyantLe/awesome-openclaw.git"
+  },
+  "keywords": [
+    "openclaw",
+    "ai",
+    "agent",
+    "skills",
+    "awesome-list",
+    "claude",
+    "automation"
+  ],
+  "author": "OpenClaw Community",
+  "license": "MIT",
+  "devDependencies": {
+    "lychee": "^0.15.0"
+  }
+}

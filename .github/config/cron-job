@@ -1,0 +1,65 @@
+# =============================================================================
+# Awesome OpenClaw - Cron 任务配置
+# =============================================================================
+# 安装方法：
+# 1. 复制此文件到 /etc/cron.d/awesome-openclaw（需要 sudo）
+#    sudo cp .github/config/cron-job /etc/cron.d/awesome-openclaw
+#
+# 2. 或者添加到用户 crontab：
+#    crontab -e
+#    然后粘贴下面的行
+#
+# 3. 验证：
+#    sudo systemctl status cron
+#    grep awesome-openclaw /var/log/syslog
+# =============================================================================
+
+# 环境变量
+SHELL=/bin/bash
+PATH=/usr/local/bin:/usr/bin:/bin
+MAILTO=""  # 如有错误，发送邮件到此地址
+
+# -----------------------------------------------------------------------------
+# 定时任务
+# -----------------------------------------------------------------------------
+# 每 2 小时执行一次（在每小时的第 15 分钟，避开整点高峰）
+# 格式：分钟 小时 日 月 周 用户 命令
+
+# 方案 A：系统级 cron（/etc/cron.d/awesome-openclaw）
+15 */2 * * * root /home/parallels/code/awesome-openclaw/.github/scripts/auto-update.sh >> /var/log/awesome-openclaw/cron.log 2>&1
+
+# 方案 B：用户级 cron（crontab -e）
+# 15 */2 * * * /home/parallels/code/awesome-openclaw/.github/scripts/auto-update.sh >> /var/log/awesome-openclaw/cron.log 2>&1
+
+# -----------------------------------------------------------------------------
+# 备选方案：systemd timer（更现代的方式）
+# -----------------------------------------------------------------------------
+# 创建 /etc/systemd/system/awesome-openclaw-update.service:
+# [Unit]
+# Description=Awesome OpenClaw Auto Update
+# After=network.target
+#
+# [Service]
+# Type=oneshot
+# ExecStart=/home/parallels/code/awesome-openclaw/.github/scripts/auto-update.sh
+# User=root
+# WorkingDirectory=/home/parallels/code/awesome-openclaw
+#
+# 创建 /etc/systemd/system/awesome-openclaw-update.timer:
+# [Unit]
+# Description=Run Awesome OpenClaw Update every 2 hours
+#
+# [Timer]
+# OnBootSec=15min
+# OnUnitActiveSec=2h
+# Unit=awesome-openclaw-update.service
+#
+# [Install]
+# WantedBy=timers.target
+#
+# 启用：
+# sudo systemctl enable awesome-openclaw-update.timer
+# sudo systemctl start awesome-openclaw-update.timer
+#
+# 查看状态：
+# systemctl list-timers | grep awesome-openclaw

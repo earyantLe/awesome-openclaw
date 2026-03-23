@@ -1,0 +1,41 @@
+# =============================================================================
+# Awesome OpenClaw - .gitignore 补充配置
+# 用途：保护敏感配置和日志文件
+# =============================================================================
+
+# 敏感配置文件（含 Token/密码）
+.github/config/update.config
+.github/config/*.secret
+.github/config/*.env
+
+# Token 文件
+**/github-tokens.txt
+**/.tokens
+**/secrets.txt
+
+# 日志文件
+logs/
+*.log
+/var/log/awesome-openclaw/
+/tmp/awesome-openclaw-logs/
+
+# 临时文件
+*.tmp
+*.swp
+*.swo
+*~
+.semaphore*
+/tmp/awesome-openclaw-*
+
+# 本地配置覆盖
+.config.local
+*.local
+
+# IDE/编辑器
+.idea/
+.vscode/
+*.sublime-*
+
+# 系统文件
+.DS_Store
+Thumbs.db

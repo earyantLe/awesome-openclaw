@@ -1,0 +1,10 @@
+{
+  "version": 1,
+  "skills": {
+    "pua": {
+      "source": "tanweai/pua",
+      "sourceType": "github",
+      "computedHash": "0b2005f6f5783a3eaf89f7bd6417de92a3fd8b85c5ba6deb8602e4b4f57e1c4d"
+    }
+  }
+}
