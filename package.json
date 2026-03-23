@@ -4,6 +4,7 @@
   "description": "A curated list of awesome OpenClaw resources, skills, extensions, and community projects",
   "scripts": {
     "generate": "node scripts/generate-readme.js",
+    "build:pages": "node scripts/build-pages.js",
     "check-links": "lychee --verbose --no-progress --timeout 30 '**/*.md'",
     "validate": "node scripts/validate-json.js"
   },
@@ -22,7 +23,5 @@
   ],
   "author": "OpenClaw Community",
   "license": "MIT",
-  "devDependencies": {
-    "lychee": "^0.15.0"
-  }
+  "devDependencies": {}
 }

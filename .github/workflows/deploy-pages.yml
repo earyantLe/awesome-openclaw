@@ -42,18 +42,16 @@ jobs:
       - name: Install dependencies
         run: npm install
 
-      - name: Generate content
+      - name: Generate README
         run: npm run generate
 
-      - name: Build
-        run: |
-          echo "Building GitHub Pages..."
-          echo "Build completed at $(date)"
+      - name: Build Pages
+        run: npm run build:pages
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: '.'
+          path: './dist'
 
   # Deployment job
   deploy:
