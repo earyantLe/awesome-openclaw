@@ -25,7 +25,7 @@
 3. **[Featured Resources](#-featured-resources)** - Hand-picked best resources
 4. **[Build Your First Skill](examples/example-skill.md)** - Step-by-step tutorial
 
-> 💡 **Tip**: Join our [Discord Community](https://discord.gg/openclaw) for real-time help and discussions!
+> 💡 **Tip**: Join our [Discord Community](https://discord.com/invite/openclaw) for real-time help and discussions!
 
 ---
 
@@ -104,17 +104,17 @@ openclaw status
 
 ### 🚀 Popular Projects
 
-| Project | Description |
-|---------|-------------|
-| [Feishu Plugin](https://github.com/earyantLe/feishu-openclaw-plugin) | Full Feishu/Lark enterprise integration |
-| [OpenClaw for VS Code](https://marketplace.visualstudio.com/items?itemName=openclaw.openclaw) | Editor integration for skill development |
+| Project | Description | Status |
+|---------|-------------|--------|
+| [Feishu Plugin](https://github.com/earyantLe/feishu-openclaw-plugin) | Full Feishu/Lark enterprise integration | ⚠️ Contact author |
+| [OpenClaw for VS Code](https://marketplace.visualstudio.com/items?itemName=openclaw.openclaw) | Editor integration for skill development | ✅ Active |
 
 ### 🎨 Community Highlights
 
-| Resource | Description |
-|----------|-------------|
-| [Discord Community](https://discord.gg/openclaw) | Active community with helpful members |
-| [ClawHub](https://clawhub.ai) | Community marketplace for skills and extensions |
+| Resource | Description | Status |
+|----------|-------------|--------|
+| [Discord Community](https://discord.com/invite/openclaw) | Active community with helpful members | ✅ Active |
+| [ClawHub](https://clawhub.ai) | Community marketplace for skills and extensions | ✅ Active |
 
 ---
 
@@ -197,11 +197,11 @@ Extend OpenClaw's capabilities with custom integrations.
 
 ### Core Extensions
 
-| Extension | Description | Author |
-|-----------|-------------|--------|
-| [Feishu OpenClaw Plugin](https://github.com/earyantLe/feishu-openclaw-plugin) | 飞书 (Lark) integration - IM/Calendar/Docs/Bitable | @earyantLe |
-| OpenClaw Cloud | Self-hosted cloud deployment tools | OpenClaw Team |
-| OpenClaw VS Code Extension | Editor integration for skill development | OpenClaw Team |
+| Extension | Description | Author | Status |
+|-----------|-------------|--------|--------|
+| [Feishu OpenClaw Plugin](https://github.com/earyantLe/feishu-openclaw-plugin) | 飞书 (Lark) integration - IM/Calendar/Docs/Bitable | @earyantLe | ⚠️ Contact author |
+| [OpenClaw VS Code Extension](https://marketplace.visualstudio.com/items?itemName=openclaw.openclaw) | Editor integration for skill development | OpenClaw Team | ✅ Active |
+| OpenClaw Cloud | Self-hosted cloud deployment tools | OpenClaw Team | ❌ Deprecated |
 
 ### Popular Integrations
 
@@ -373,8 +373,28 @@ A: Absolutely! Check out our [Skills Guide](https://docs.openclaw.ai/skills) and
 **Q: How do I contribute?**  
 A: See our [Contributing Guide](CONTRIBUTING.md) for how to submit resources, fix bugs, or add features.
 
-**Q: Where can I get help?**  
-A: Join our [Discord Community](https://discord.gg/openclaw) or open an [Issue on GitHub](https://github.com/earyantLe/awesome-openclaw/issues).
+**Q: Where can I get help?**
+A: Join our [Discord Community](https://discord.com/invite/openclaw) or open an [Issue on GitHub](https://github.com/earyantLe/awesome-openclaw/issues).
+
+### 🔧 Troubleshooting
+
+**Q: How do I install skills?**
+A: Use `npx skills add <repo> --skill <name>` or `openclaw skills check` to verify requirements.
+
+**Q: Why does my skill show "missing"?**
+A: Check the [Skills Check](#-skills) section for required binaries/API keys. Run `openclaw skills check` for details.
+
+**Q: How do I fix "command not found"?**
+A: Ensure Node.js 18+ is installed. Try `npm install -g openclaw --force` to reinstall.
+
+### 📊 Resource Status
+
+| Status | Meaning |
+|--------|---------|
+| ✅ Active | Actively maintained, links verified |
+| ⚠️ Contact Author | Access requires contacting the author |
+| ❌ Deprecated | No longer maintained, use alternatives |
+| 🆕 New | Recently added (within 30 days) |
 
 ### Integration Questions
 

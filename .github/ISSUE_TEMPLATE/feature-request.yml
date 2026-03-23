@@ -1,0 +1,49 @@
+---
+name: 功能建议 / Feature Request
+description: 提出改进建议或新功能请求 / Suggest improvements or request new features
+title: '[Feature] <建议描述 / Suggestion Description>'
+labels: [enhancement]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        感谢您提出建议！请填写以下信息以帮助我们了解您的需求。
+
+        Thank you for your suggestion! Please fill in the following information to help us understand your needs.
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: 相关痛点 / Related Problem
+      description: 您的建议是否解决了某个问题？请描述。 / Does your suggestion solve a problem? Please describe.
+      placeholder: 我经常遇到...的问题 / I often encounter the problem of...
+
+  - type: textarea
+    id: proposed-solution
+    attributes:
+      label: 建议方案 / Proposed Solution
+      description: 您希望如何实现或改进？ / How would you like to implement or improve this?
+      placeholder: 我建议添加... / I suggest adding...
+    validations:
+      required: true
+
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: 其他方案 / Alternative Solutions
+      description: 您是否考虑过其他解决方案？ / Have you considered other solutions?
+      placeholder: 或者也可以... / Alternatively...
+
+  - type: textarea
+    id: additional-context
+    attributes:
+      label: 附加信息 / Additional Context
+      description: 其他相关信息或截图 / Any other relevant information or screenshots
+      render: markdown
+
+  - type: checkboxes
+    id: contribution
+    attributes:
+      label: 贡献意愿 / Willingness to Contribute
+      options:
+        - label: 我愿意帮助实现这个功能 / I would like to help implement this feature

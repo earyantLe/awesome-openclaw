@@ -1,0 +1,77 @@
+---
+name: 错误报告 / Bug Report
+description: 报告仓库中的问题，如死链接、错误信息等 / Report issues like broken links, errors, etc.
+title: '[Bug] <问题描述 / Issue Description>'
+labels: [bug]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        感谢您报告问题！请填写以下信息以帮助我们更快地定位问题。
+
+        Thank you for reporting an issue! Please fill in the following information to help us address it faster.
+
+  - type: input
+    id: affected-page
+    attributes:
+      label: 影响页面 / Affected Page
+      description: 出现问题所在的页面或文件 / Page or file where the issue occurs
+      placeholder: README.md, docs/xxx.md, etc.
+
+  - type: dropdown
+    id: issue-type
+    attributes:
+      label: 问题类型 / Issue Type
+      description: 选择最符合问题的类型 / Select the issue type that best matches
+      options:
+        - 死链接 / Broken Link
+        - 错误信息 / Incorrect Information
+        - 格式问题 / Formatting Issue
+        - 拼写/语法错误 / Typo/Grammar Error
+        - 内容过时 / Outdated Content
+        - 其他 / Other
+    validations:
+      required: true
+
+  - type: textarea
+    id: problem-description
+    attributes:
+      label: 问题描述 / Problem Description
+      description: 请详细描述您发现的问题 / Please describe the issue you found in detail
+      placeholder: 在...页面，...链接返回 404 错误 / On the ... page, the ... link returns 404
+    validations:
+      required: true
+
+  - type: input
+    id: expected
+    attributes:
+      label: 期望行为 / Expected Behavior
+      description: 您期望的正确结果是什么 / What is the expected correct result
+      placeholder: 链接应该跳转到... / The link should go to...
+
+  - type: input
+    id: actual
+    attributes:
+      label: 实际行为 / Actual Behavior
+      description: 实际发生了什么 / What actually happened
+      placeholder: 链接返回 404 错误 / Link returns 404 error
+
+  - type: textarea
+    id: screenshots
+    attributes:
+      label: 截图 / Screenshots (可选)
+      description: 如有需要，添加截图以帮助说明问题 / Add screenshots if helpful
+
+  - type: input
+    id: environment
+    attributes:
+      label: 环境信息 / Environment
+      description: 浏览器、OpenClaw 版本等 / Browser, OpenClaw version, etc.
+      placeholder: Chrome 120, OpenClaw 2026.3.2
+
+  - type: textarea
+    id: additional-context
+    attributes:
+      label: 附加信息 / Additional Context
+      description: 其他相关信息 / Any other relevant information
+      render: markdown

@@ -1,0 +1,109 @@
+---
+name: 资源提交 / Resource Submission
+description: 提交新的 OpenClaw 资源、技能或教程 / Submit new OpenClaw resources, skills, or tutorials
+title: '[Resource] <资源名称 / Resource Name>'
+labels: [resource-submission]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        感谢您提交资源！请填写以下信息以确保资源符合收录标准。
+
+        Thank you for submitting a resource! Please fill in the following information to ensure it meets our inclusion criteria.
+
+  - type: input
+    id: resource-name
+    attributes:
+      label: 资源名称 / Resource Name
+      description: 请提供资源的完整名称 / Please provide the full name of the resource
+      placeholder: 例如：My Awesome Skill
+    validations:
+      required: true
+
+  - type: input
+    id: resource-url
+    attributes:
+      label: 资源链接 / Resource URL
+      description: 请提供资源的有效链接 / Please provide a working URL for the resource
+      placeholder: https://github.com/...
+    validations:
+      required: true
+
+  - type: dropdown
+    id: resource-type
+    attributes:
+      label: 资源类型 / Resource Type
+      description: 选择最适合的资源类别 / Select the most appropriate category
+      options:
+        - 技能 / Skill
+        - 集成 / Integration
+        - 教程 / Tutorial
+        - 工具 / Tool
+        - 项目 / Project
+        - 其他 / Other
+    validations:
+      required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: 资源描述 / Description
+      description: 用 1-2 句话描述资源的功能和用途 / Describe the resource in 1-2 sentences
+      placeholder: 这个资源可以帮助用户... / This resource helps users...
+    validations:
+      required: true
+
+  - type: dropdown
+    id: language
+    attributes:
+      label: 主要语言 / Primary Language
+      options:
+        - 英文 / English
+        - 中文 / Chinese
+        - 双语 / Bilingual
+        - 其他 / Other
+    validations:
+      required: true
+
+  - type: input
+    id: author
+    attributes:
+      label: 作者 / Author
+      description: 资源作者或维护者 / Resource author or maintainer
+      placeholder: '@username'
+
+  - type: dropdown
+    id: status
+    attributes:
+      label: 维护状态 / Maintenance Status
+      options:
+        - ✅ 活跃维护 / Actively Maintained
+        - ⚠️ 维护较少 / Lightly Maintained
+        - 🆕 新资源 / New Resource
+        - ❓ 不确定 / Unknown
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: checklist
+    attributes:
+      label: 提交确认 / Submission Checklist
+      description: 请确认您的提交符合以下要求 / Please confirm your submission meets the following requirements
+      options:
+        - label: 我已测试链接有效 / I have verified the link works
+          required: true
+        - label: 资源与 OpenClaw 生态相关 / Resource is related to OpenClaw ecosystem
+          required: true
+        - label: 描述简洁清晰（1-2 句） / Description is concise (1-2 sentences)
+          required: true
+        - label: 非重复内容 / Not a duplicate entry
+          required: true
+        - label: 非纯自我推广 / Not pure self-promotion
+          required: true
+
+  - type: textarea
+    id: additional-notes
+    attributes:
+      label: 附加说明 / Additional Notes
+      description: 其他需要说明的信息 / Any additional information
+      render: markdown
