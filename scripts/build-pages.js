@@ -28,11 +28,22 @@ function parseMarkdown(md) {
     return `%%INLINECODE${inlineCodes.length - 1}%%`;
   });
 
+  // Store blockquotes to prevent internal processing
+  const blockquotes = [];
+  html = html.replace(/^>>> ([\s\S]*?)<<<$/gm, (match, content) => {
+    blockquotes.push(content);
+    return `%%BLOCKQUOTE${blockquotes.length - 1}%%`;
+  });
+
   // Headers (must be processed before other elements)
   html = html.replace(/^#### (.+)$/gm, '<h4>$1</h4>');
   html = html.replace(/^### (.+)$/gm, '<h3>$1</h3>');
   html = html.replace(/^## (.+)$/gm, '<h2>$1</h2>');
   html = html.replace(/^# (.+)$/gm, '<h1>$1</h1>');
+
+  // Horizontal rule (before list processing)
+  html = html.replace(/^---$/gm, '<hr>');
+  html = html.replace(/^\*\*\*$/gm, '<hr>');
 
   // Bold
   html = html.replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>');
@@ -46,39 +57,71 @@ function parseMarkdown(md) {
   // Links
   html = html.replace(/\[([^\]]+)\]\(([^)]+)\)/g, '<a href="$2">$1</a>');
 
-  // Blockquotes
+  // Blockquotes (simple line-by-line)
   html = html.replace(/^> (.+)$/gm, '<blockquote>$1</blockquote>');
   html = html.replace(/<\/blockquote>\n<blockquote>/g, '\n');
 
-  // Unordered lists
-  html = html.replace(/^[\-\*] (.+)$/gm, '<li>$1</li>');
-  html = html.replace(/(<li>.*<\/li>\n?)+/g, '<ul>\n$&</ul>\n');
+  // Unordered lists - handle various bullet styles
+  html = html.replace(/^[\-\*\+] (.+)$/gm, '<li>$1</li>');
+
+  // Wrap consecutive li elements in ul
+  html = html.replace(/(<li>.*<\/li>(\n|$))+/g, (match) => {
+    return '<ul>\n' + match + '</ul>\n';
+  });
 
   // Ordered lists
-  html = html.replace(/^\d+\. (.+)$/gm, '<oli>$1</oli>');
-  html = html.replace(/(<oli>.*<\/oli>\n?)+/g, '<ol>\n$&</ol>\n');
-  html = html.replace(/<\/oli>/g, '</li>');
-  html = html.replace(/<oli>/g, '<li>');
+  html = html.replace(/^\d+\.\s+(.+)$/gm, '<oli>$1</oli>');
 
-  // Horizontal rule
-  html = html.replace(/^---$/gm, '<hr>');
+  // Wrap consecutive oli elements in ol
+  html = html.replace(/(<oli>.*<\/oli>(\n|$))+/g, (match) => {
+    let oliList = match;
+    oliList = oliList.replace(/<\/oli>/g, '</li>');
+    oliList = oliList.replace(/<oli>/g, '<li>');
+    return '<ol>\n' + oliList + '</ol>\n';
+  });
 
-  // Line breaks
-  html = html.replace(/\n\n/g, '</p><p>');
-  html = html.replace(/\n/g, '<br>');
+  // Checkbox items
+  html = html.replace(/^- \[([ x])\] (.+)$/gm, '<li class="task-list-item"><input type="checkbox" disabled $1="$1"> $2</li>');
 
-  // Wrap in paragraphs
-  html = `<p>${html}</p>`;
+  // Process line breaks and paragraphs
+  // Split by double newlines for paragraphs
+  const paragraphs = html.split(/\n\n+/);
+
+  html = paragraphs.map(para => {
+    para = para.trim();
+    if (!para) return '';
+
+    // Skip if already wrapped in block-level elements
+    if (para.startsWith('<h') ||
+        para.startsWith('<ul') ||
+        para.startsWith('<ol') ||
+        para.startsWith('<li') ||
+        para.startsWith('<blockquote') ||
+        para.startsWith('<pre') ||
+        para.startsWith('<hr') ||
+        para.startsWith('%%')) {
+      // Convert single newlines to <br> within these elements
+      return para.replace(/\n/g, ' ');
+    }
+
+    // Wrap in paragraph
+    return '<p>' + para.replace(/\n/g, ' ') + '</p>';
+  }).join('\n');
+
+  // Clean up empty paragraphs
   html = html.replace(/<p>\s*<\/p>/g, '');
-  html = html.replace(/<p>(<h[1-4]>)/g, '$1');
-  html = html.replace(/(<\/h[1-4]>)<\/p>/g, '$1');
-  html = html.replace(/<p>(<ul>)/g, '$1');
-  html = html.replace(/(<\/ul>)<\/p>/g, '$1');
-  html = html.replace(/<p>(<ol>)/g, '$1');
-  html = html.replace(/(<\/ol>)<\/p>/g, '$1');
-  html = html.replace(/<p>(<blockquote>)/g, '$1');
-  html = html.replace(/(<\/blockquote>)<\/p>/g, '$1');
-  html = html.replace(/<p>(<hr>)<\/p>/g, '$1');
+  html = html.replace(/<p>\s*(<h[1-4]>)/g, '$1');
+  html = html.replace(/(<\/h[1-4]>)\s*<\/p>/g, '$1');
+  html = html.replace(/<p>\s*(<ul>)/g, '$1');
+  html = html.replace(/(<\/ul>)\s*<\/p>/g, '$1');
+  html = html.replace(/<p>\s*(<ol>)/g, '$1');
+  html = html.replace(/(<\/ol>)\s*<\/p>/g, '$1');
+  html = html.replace(/<p>\s*(<blockquote>)/g, '$1');
+  html = html.replace(/(<\/blockquote>)\s*<\/p>/g, '$1');
+  html = html.replace(/<p>\s*(<hr>)/g, '$1');
+  html = html.replace(/(<hr>)\s*<\/p>/g, '$1');
+  html = html.replace(/<p>\s*(<pre>)/g, '$1');
+  html = html.replace(/(<\/pre>)\s*<\/p>/g, '$1');
 
   // Restore code blocks
   html = html.replace(/%%CODEBLOCK(\d+)%%/g, (match, index) => {
@@ -99,11 +142,17 @@ function parseMarkdown(md) {
     return `<code>${code}</code>`;
   });
 
+  // Restore blockquotes
+  html = html.replace(/%%BLOCKQUOTE(\d+)%%/g, (match, index) => {
+    const content = blockquotes[index];
+    return `<blockquote>${content}</blockquote>`;
+  });
+
   return html;
 }
 
 // Generate navigation from file structure
-function generateNavigation(files, currentFile) {
+function generateNavigation(currentFile) {
   const navItems = [
     { href: 'index.html', text: '🏠 Home' },
     { href: 'tutorials/index.html', text: '📚 Tutorials' },
@@ -162,7 +211,7 @@ function addAnchorLinks(html) {
 }
 
 // HTML Template
-function getHTMLTemplate(title, content, toc, isIndex = false) {
+function getHTMLTemplate(title, content, toc, relPath = '.') {
   return `<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -170,15 +219,15 @@ function getHTMLTemplate(title, content, toc, isIndex = false) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>${title} - Awesome OpenClaw</title>
     <meta name="description" content="Awesome OpenClaw - A curated list of OpenClaw resources, skills, and community projects">
-    <link rel="stylesheet" href="${isIndex ? '' : '../'}docs/styles.css">
-    <link rel="stylesheet" href="${isIndex ? '' : '../'}docs/pages.css">
+    <link rel="stylesheet" href="${relPath}/docs/styles.css">
+    <link rel="stylesheet" href="${relPath}/docs/pages.css">
     <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🦞</text></svg>">
 </head>
 <body>
     <header class="site-header">
         <div class="container">
-            <a href="${isIndex ? '' : '../'}index.html" class="logo">🦞 Awesome OpenClaw</a>
-            ${generateNavigation({}, isIndex ? 'index.html' : '../index.html')}
+            <a href="${relPath}/index.html" class="logo">🦞 Awesome OpenClaw</a>
+            ${generateNavigation(relPath === '.' ? 'index.html' : relPath + '/index.html')}
         </div>
     </header>
 
@@ -194,17 +243,29 @@ function getHTMLTemplate(title, content, toc, isIndex = false) {
     <footer class="site-footer">
         <div class="container">
             <p>🦞 Awesome OpenClaw - A community-driven resource list</p>
-            <p>Licensed under MIT | <a href="${isIndex ? '' : '../'}CONTRIBUTING.html">Contributing</a> | <a href="${isIndex ? '' : '../'}CODE_OF_CONDUCT.html">Code of Conduct</a></p>
+            <p>Licensed under MIT | <a href="${relPath}/CONTRIBUTING.html">Contributing</a> | <a href="${relPath}/CODE_OF_CONDUCT.html">Code of Conduct</a></p>
         </div>
     </footer>
 
-    <script src="${isIndex ? '' : '../'}docs/script.js"></script>
+    <script src="${relPath}/docs/script.js"></script>
 </body>
 </html>`;
 }
 
+// Get relative path for assets
+function getRelativePath(depth) {
+  if (depth === 0) return '.';
+  return '../'.repeat(depth).replace(/\/$/, '');
+}
+
+// Calculate path depth
+function getPathDepth(filePath) {
+  const parts = filePath.split('/');
+  return parts.length - 1;
+}
+
 // Process a single markdown file
-function processFile(inputPath, outputPath, isIndex = false) {
+function processFile(inputPath, outputPath, relPath = '.') {
   console.log(`  Processing: ${inputPath} → ${outputPath}`);
 
   let md = fs.readFileSync(inputPath, 'utf8');
@@ -221,7 +282,7 @@ function processFile(inputPath, outputPath, isIndex = false) {
   const toc = generateTOC(html);
 
   // Wrap in template
-  const fullHTML = getHTMLTemplate(title, html, toc, isIndex);
+  const fullHTML = getHTMLTemplate(title, html, toc, relPath);
 
   fs.writeFileSync(outputPath, fullHTML, 'utf8');
 }
@@ -311,7 +372,10 @@ function build() {
   // Process markdown files
   console.log('\n📝 Converting markdown files...\n');
   for (const file of markdownFiles) {
-    const isIndex = file.relative === 'README.md';
+    // Calculate relative path for assets
+    const depth = getPathDepth(file.relative);
+    const relPath = getRelativePath(depth);
+
     let outputPath = file.output;
 
     // README.md at root becomes index.html
@@ -323,7 +387,7 @@ function build() {
     }
 
     try {
-      processFile(file.input, outputPath, isIndex);
+      processFile(file.input, outputPath, relPath);
     } catch (error) {
       console.error(`  Error processing ${file.input}: ${error.message}`);
     }
